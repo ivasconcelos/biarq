@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="biarq" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="biarq" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="biarq" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="biarq" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BIARQ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="app.css"/>
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header change-header>
+
+    <div class="headerContent" ng-controller="headerCtrl">
+
+        <div class="menuBtn" title="Menu" toogle-menu>
+            <div class="slashMenuBtn"></div>
+            <div class="slashMenuBtn"></div>
+            <div class="slashMenuBtn"></div>
+        </div>
+        <div class="headerLogoWrp">
+            <a href="#/home" title="Biarq Home" class="headerLogoImg">
+                <h1 class="logoBiarq">
+                    Biarq Arquitectura e Remodelações
+                </h1>
+            </a>
+        </div>
+
+        <div class="menus">
+
+            <ul>
+                <li><a ng-click="closeMenu()"  href="#/home" title="home">Home</a></li>
+                <li><a ng-click="closeMenu()"  href="#/portfolio" title="Portefólio">Portefólio</a></li>
+                <li><a ng-click="closeMenu()"  href="#/view1" title="Em construção">Em construção</a></li>
+                <li><a ng-click="closeMenu()"  href="#" title="Remodelações">Remodelações</a></li>
+                <li><a ng-click="closeMenu()"  href="#" title="Stands">Stands</a></li>
+                <li><a ng-click="closeMenu()"  href="#/about" title="Biarq">Biarq</a></li>
+                <li><a ng-click="closeMenu()" href="#/contactos" title="Contactos">Contactos</a></li>
+
+
+
+            </ul>
+        </div>
+
+
+        <div class="clear"></div>
+    </div>
+</header>
+
+<div ng-view class="viewContent"></div>
+
+<footer>
+    <div class="footerContent">
+        <div class="footerCopy">
+            <span class="biarqColor"> BIARQ </span> &copy; 2014. All rights reserved.
+            Powered by <a href="#" title="SyncIM"> SyncIM </a> | Tel: +351.960021911
+        </div>
+        <div class="footerLogo">
+            <img src="img/footerLogo.png">
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src='bower_components/lodash/dist/lodash.underscore.min.js'></script>
+<script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+
+<script src="app.js"></script>
+<script src="home/home.js"></script>
+<script src="view1/view1.js"></script>
+<script src="contactos/contactos.js"></script>
+<script src="about/about.js"></script>
+<script src="portfolio/portfolio.js"></script>
+<script src="comon.js"></script>
+
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+<script src="components/biarq/projecto.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $(".menuBtn").click(function () {
+            $(".menus").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>

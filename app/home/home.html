@@ -1,0 +1,84 @@
+<!-- HOME -- PROJECT AREA -->
+<div class="homeProjectArea" ng-controller="portfolioCtrl" style="padding-top: 50px;">
+    <!-- PROJECT -->
+    <div class="pWrp" data-ng-repeat="proj in projectos|limitTo:3">
+
+        <!--PPROJECT IMAGE -->
+        <div class="pImgWrp">
+            <a class="pImgLink" href="#/{{proj.url()}}" title="{{proj.titulo}}">
+                <!-- BOLAS BRANCAS -->
+                <div class="bolasWrp">
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="clear"></div>
+                </div>
+            </a>
+
+            <!-- PROJECT IMG -->
+            <img data-ng-src="{{proj.fotoprincipal}}" alt="{{proj.titulo}}" class="pImg">
+        </div>
+
+        <!--PROJECT TITLE -->
+        <p class="title2"> {{proj.titulo}} </p>
+
+
+        <!--PROJECT DESCRIPTION -->
+        <div class="pDesc">
+            <p> {{proj.texto}}</p>
+        </div>
+
+        <!--PROJECT BTN 'VER MAIS' -->
+        <div class="mainBtn">
+            <a href="#/{{proj.url()}}" title="Ver Mais">Ver Mais</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+        <!-- END PROJECT AREA -->
+
+<!-- OTHER AREA -->
+<!--
+background-color: #f5f5f6"-->
+
+<!-- HOME -- DEEP SENTENCE AREA -->
+<div class="homeDeepAreaWrp">
+    <div class="homeDeepAreaContent" style="text-align: center">
+    <h2> Inventa algo para aqui </h2>
+<p> A arquitectura é uma arte, mas, mais do que isso, é a única vertente da arte que se alia à ciência. A ciência do espaço… Veja o seu projecto tratado com o respeito e atenção que ele merece. Visite o portfólio, deixe a sua opinião, e peça um orçamento gratuito e sem compromisso…</p>
+</div>
+        </div>
+
+
+<div class="homeCompetenciasAreaWrp">
+    <div class="homeCompetenciasAreaContent">
+    <h2 style="margin-bottom: 70px"> Áreas de Competência</h2>
+
+
+
+<div class="pullLeft" style="margin-right: 50px">
+<p class="title2"> <span class="exp"> </span> Arquitectura</p>
+<p  class="title2"> <span class="exp"> </span> Projectos S.C.I.E.</p>
+<p class="title2"><span class="exp"> </span>Licenciamentos</p>
+    <p class="title2"><span class="exp"> </span>Legalizacoes</p>
+</div>
+
+        <div class="pullLeft" style="margin-right: 50px">
+<p class="title2"><span class="exp"> </span>Modelação 3D</p>
+<p class="title2"><span class="exp"> </span>Arquitecura de interiores</p>
+<p class="title2"><span class="exp"> </span>Direcções Técnicas</p>
+            <p class="title2"><span class="exp"> </span>Reconstruções</p>
+            </div>
+        <div class="pullLeft">
+
+<p class="title2"><span class="exp"> </span>Levantamentos Topograficos</p>
+<p class="title2"><span class="exp"> </span>Serviços de Consultoria</p>
+            <p class="title2"><span class="exp"> </span>Projecto comportamento térmico</p>
+            </div>
+
+        <div class="clear"></div>
+
+
+    </div>
+</div>

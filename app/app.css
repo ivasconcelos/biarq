@@ -1,0 +1,493 @@
+/* RESET CSS */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* GENERAL */
+body {
+    font: 14px/24px Arial, Helvetica, sans-serif;
+    color: #bab9b9;
+}
+
+h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #48474d;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.2em;
+
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'PT Sans', 'arial', sans-serif;
+}
+
+a:hover, .currentLink, .biarqColor {
+    color: #8dbf41;
+}
+
+.clear {
+    clear: both
+}
+
+.pullLeft {
+    float: left;
+}
+
+.margRight50 {
+    margin-right: 50px;
+}
+
+p {
+    line-height: 2em;
+}
+
+/* HEADER */
+
+header {
+    padding-top: 5px;
+    height: 480px;
+    background: #000000 url('img/headerBg.jpg') center 0 no-repeat;
+    width: 100%;
+}
+
+.logoBiarq {
+    display: none;
+}
+
+.headerContent {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.headerLogoWrp {
+    margin: 0 auto;
+    padding-top: 60px;
+    width: 350px;
+
+}
+
+/* HEADER SE FOR NUMA RESOLUÇAO GRANDE*/
+@media (min-width: 768px) {
+    header {
+        height: 220px;
+        padding-top: 5%;
+    }
+
+    .headerLogoWrp {
+        float: left;
+        padding-top: 0 !important;
+    }
+
+}
+
+.headerLogoImg {
+    width: 350px;
+    height: 150px;
+    background-image: url('img/headerLogo.png');
+    background-size: 100%;
+    display: block;
+}
+
+.menus {
+    float: left;
+    display: none;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    /*margin-top: 20px;*/
+}
+
+.menus ul {
+    float: left;
+    min-width: 400px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.menus li {
+    display: block;
+    padding: 10px;
+}
+
+.menuBtn {
+    border: 1px solid #999999;
+    border-radius: 3px;
+    float: right;
+    width: 40px;
+    height: 25px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.slashMenuBtn {
+    background-color: #ffffff;
+    width: 20px;
+    height: 2px;
+    margin: 5px 10px;
+}
+
+/* MENU -- SE FOR NUMA RESOLUÇÃO MAIOR */
+@media (min-width: 768px) {
+
+    .menus {
+        float: right;
+        margin-top: 45px;
+        display: block;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .menus li {
+        display: inline;
+        margin-left: 20px;
+        background-color: transparent;
+    }
+
+    .menuBtn {
+        display: none;
+    }
+
+}
+
+/* FOOTER */
+footer {
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    color: #344045;
+    font: 15px/24px 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.footerContent {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+
+.footerCopy {
+    float: left;
+}
+
+.footerLogo {
+    float: right;
+}
+
+footer a {
+    color: #344045;
+    text-transform: none
+}
+
+/* NG-VIEW CONTENT */
+.viewContent {
+    width: 100%;
+    /*    max-width: 1170px;
+        margin: 0 auto;
+        padding: 50px 5px 50px 5px;
+        box-sizing: border-box*/
+}
+
+/* NG-VIEW CONTENT SE FOR NUMA RESOLUÇÃO MAIOR*/
+@media (min-width: 768px) {
+    .viewContent {
+        padding: 50px 0 50px 0;
+    }
+
+}
+
+/* CONTACTS -- MOBILE FIRST*/
+
+/* CONTACTS GOOGLE MAP*/
+.googleMapWrp {
+    margin-bottom: 50px;
+}
+
+/* CONTACTS FORM */
+.contactsWrp form input, .contactsWrp form textarea {
+    width: 100%;
+    border: 1px solid #555555;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* TO DO :: JQUERY :: NEEDS IE WORKAROUND*/
+/* TO DO :: CSS :: NEEDS OTHER BROWSERS */
+.contactsWrp form ::-webkit-input-placeholder {
+    /*color: #bab9b9;*/
+    font-size: 14px;
+}
+
+.contactsWrp form textarea {
+    height: 200px;
+}
+
+.contactsFormWrp {
+    float: none;
+    width: 100%;
+}
+
+.contactsFormWrp p:first-child input {
+    margin-left: 0;
+}
+
+/* CONTACTS FORM SEND BTN */
+.mainBtn {
+    margin-top: 30px;
+}
+
+.mainBtn a {
+    padding: 15px 25px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #344046;
+    transition: background-color 1s;
+}
+
+.mainBtn a:hover {
+    background-color: #8dbf41;
+    transition: background-color 1s;
+}
+
+/* CONTACTS MAP */
+.angular-google-map-container {
+    height: 400px;
+}
+
+/* CONTACTS ADDRESS */
+.title2 {
+    color: #8dbf41;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+}
+
+.contactsInfoWrp {
+    float: none;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* CONTACTS SE FOR NUMA RESOLUÇÃO GRANDE*/
+@media (min-width: 768px) {
+    .contactsInfoWrp {
+        float: left;
+        width: 35%;
+    }
+
+    .contactsFormWrp {
+        float: left;
+        width: 65%;
+    }
+
+    .contactsWrp .contactsFormWrp input {
+        width: 32%;
+        float: left;
+        margin: 0 0 10px 2%;
+    }
+
+    .contactsWrp form input, .contactsWrp form textarea {
+        border-color: #eaecec;
+    }
+
+}
+
+/* PORTFOLIO */
+.pWrp {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.pImgWrp {
+    width: 100%;
+    position: relative;
+
+}
+
+@media (min-width: 768px) {
+    .pWrp {
+        width: 31%;
+        float: left;
+        margin-right: 2%;
+
+    }
+
+}
+
+.pImgLink {
+    width: 100%;
+    height: 98%;
+    display: block;
+    position: absolute;
+    transition: all 0.6s;
+}
+
+.pImgWrp:hover .pImgLink {
+    background-color: #8dbf41;
+    transition: all 0.6s;
+    opacity: 0.8;
+}
+
+.pImg {
+    width: 100%;
+    height: 100%;
+}
+
+/* PORTOFLIO IMG SE FOR NUMA RESOLUÇÃO GRANDE */
+@media (min-width: 768px) {
+    .pImg {
+        max-height: 200px;
+
+    }
+
+}
+
+/* BOLAS EXPERIENCES*/
+.bolasWrp {
+    width: 86px;
+    height: 24px;
+    margin: 0 auto;
+    padding-top: 25%;
+}
+
+.pImgWrp:hover .bola {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    opacity: 1;
+    border-radius: 25px;
+    float: left;
+    background-color: #ffffff;
+    transition: all 0.4s;
+}
+
+/* PROJECT DESCRIPTION*/
+
+.pDesc {
+
+    height: 4.5em;
+    overflow: hidden;
+}
+
+.pWrp:last-of-type {
+    background-color: lime;
+    padding: 10px;
+}
+
+.pWrp .title2 {
+    margin: 20px 0;
+}
+
+/* PROJECT BTN SE FOR NUMA RESOLUÇAO GRANDE */
+@media (min-width: 768px) {
+    .pWrp .mainBtn {
+        margin-bottom: 50px;
+    }
+}
+
+/* VIEW SPECIFI PROJECT*/
+.verImgWrp {
+    padding-top: 40px;
+    width: 100%;
+}
+
+/* VIEW SPECIFI PROJECT SE FOR NUMA RESOLUÇAO MAIOR*/
+@media (min-width: 768px) {
+
+    .verProjImgWrp, .verProjTxtWrp {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .verProjTxtWrp {
+        margin-top: 30px;
+    }
+}
+
+/* ABOUT PAGE */
+.aboutImg {
+    margin: 40px 0;
+    width: 100%;
+    height: 300px;
+    max-width: 600px;
+    background: url('img/bruno.jpg');
+
+}
+
+/*HOME*/
+
+/* PROJECT AREA -- HOME*/
+/*O overlay no hover passa a ser transparente em vez de verde*/
+.homeProjectArea .pImgWrp:hover .pImgLink {
+    background-color: transparent;
+    transition: all 0.6s;
+}
+
+/*No overlay no hover as bolas brancas passam a ter uma borda*/
+.homeProjectArea .pImgWrp:hover .bola {
+    border: 3px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+.homeDeepAreaWrp {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 50px 0;
+
+}
+
+.homeCompetenciasAreaWrp{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.homeDeepAreaContent, .homeProjectArea, .homeCompetenciasAreaContent, .pageAreaWrp {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 5px 50px 5px;
+    box-sizing: border-box;
+
+}
+
+.homeProjectArea, .homeCompetenciasAreaContent{
+    padding-bottom: 0;
+}
+
+.exp {
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    background-color: #eeeeee;
+    margin-right: 20px;
+}

@@ -1,0 +1,42 @@
+<!-- PORTFOLIO PAGE WRAP -->
+<div class="pageAreaWrp">
+
+    <!-- PROJECT -->
+    <h2> Projectos </h2>
+
+    <div class="pWrp" data-ng-repeat="proj in projectos">
+
+        <!--PPROJECT IMAGE -->
+        <div class="pImgWrp">
+            <a class="pImgLink" href="#/{{proj.url()}}" title="{{proj.titulo}}">
+
+                <!-- BOLAS BRANCAS -->
+                <div class="bolasWrp">
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="clear"></div>
+                </div>
+
+            </a>
+
+            <!-- PROJECT IMG -->
+            <img data-ng-src="{{proj.fotoprincipal}}" alt="{{proj.titulo}}" class="pImg">
+        </div>
+
+        <!--PROJECT TITLE -->
+        <p class="title2"> {{proj.titulo}} </p>
+
+        <!--PROJECT DESCRIPTION -->
+        <div class="pDesc">
+            <p> {{proj.texto}}</p>
+        </div>
+
+        <!--PROJECT BTN 'VER MAIS' -->
+        <div class="mainBtn">
+            <a href="#/{{proj.url()}}" title="Ver Mais">Ver Mais</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
