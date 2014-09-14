@@ -55,7 +55,7 @@ angular.module('myApp.comon', [])
 
     }]).directive('changeHeader', ['$location',function ($location) {
         return {
-            restrict: 'A',                 // The Directive is with Attribute
+            restrict:  'A',                 // The Directive is with Attribute
             link: function (scope, elem, $attrs) {
 
 
