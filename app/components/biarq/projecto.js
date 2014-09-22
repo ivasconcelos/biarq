@@ -3,13 +3,13 @@
  */
 
 //classe PROJECTO
-function Projecto () {
-    this._id="";
-    this._keywords = [];
-    this.foto = [];
-    this.fotoprincipal="";
-    this.texto="";
-    this.titulo="";
+function Projecto (obj) {
+    this._id=obj._id;
+    this._keywords = obj._keywords;
+    this.foto = obj.foto;
+    this.fotoprincipal=obj.fotoprincipal;
+    this.texto=obj.texto;
+    this.titulo=obj.titulo;
 
     this.url = function() {
         var url = removeDiacritics(this.titulo);
@@ -129,8 +129,4 @@ function removeDiacritics (str) {
     return str;
 }
 
-var ln = new Projecto();
-ln.titulo="LN HOUSE";
-ln._id="52e6be09a43fc2c43f00006b";
 
-console.log(ln.url());

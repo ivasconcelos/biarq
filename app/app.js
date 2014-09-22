@@ -12,7 +12,9 @@ angular.module('biarq', [
   'myApp.comon',
   'google-maps',
   'ngAnimate',
-  'angularSpinner'
+  'angularSpinner',
+    'ngResource',
+    'ngSanitize'
 
 
 

@@ -9,10 +9,11 @@
 
 
     <div class="verProjImgWrp" style="background-color: lime">
-        <img data-ng-src="{{projecto.fotoprincipal}}">
+        <img data-ng-src="http://admin.biarq.com/img/projectos/grandes/{{projecto.fotoprincipal}}">
     </div>
 
     <div class="verProjTxtWrp">
-        <p>{{projecto.texto}}</p>
+        <p ng-bind-html="projecto.texto"></p>
     </div>
+    {{projecto.foto}}
 </div>
