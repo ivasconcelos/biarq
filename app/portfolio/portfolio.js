@@ -65,6 +65,17 @@ angular.module('myApp.portfolio', ['ngRoute'])
 
         $scope.projectos.push(projecto6);
 
+
+        // SPINNER
+        $(window).scroll(function() {
+
+            if( $(window).scrollTop() >= $(document).height() - $(window).height() - 300){
+                document.getElementById('spinner').style.display="block";
+
+            }
+        });
+
+
     }])
 
 
@@ -86,12 +97,3 @@ angular.module('myApp.portfolio', ['ngRoute'])
     }]);
 
 
-// SPINNER
-// TO DO -- MOVE AWAY FROM HERE
-$(window).scroll(function() {
-
- if( $(window).scrollTop() >= $(document).height() - $(window).height() - 300){
-     document.getElementById('spinner').style.display="block";
-
- }
- });
