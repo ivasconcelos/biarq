@@ -22,15 +22,17 @@
 
 
 </head>
-<body>
+<body ng-controller="headerCtrl">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<header change-header>
 
-    <div class="headerContent" ng-controller="headerCtrl">
+
+<div class="header"> <!--slider-->
+
+    <div class="headerContent">
 
         <div class="menuBtn" title="Menu" toogle-menu>
             <div class="slashMenuBtn"></div>
@@ -45,28 +47,67 @@
             </a>
         </div>
 
-        <div class="menus">
+        <div class="menus" ng-repeat="menu in mainMenu">
 
-            <ul>
-                <li><a ng-click="closeMenu()"  href="#/home" title="home">Home</a></li>
-                <li><a ng-click="closeMenu()"  href="#/portfolio" title="Portefólio">Portefólio</a></li>
-                <li><a ng-click="closeMenu()"  href="#/view1" title="Em construção">Em construção</a></li>
-                <li><a ng-click="closeMenu()"  href="#" title="Remodelações">Remodelações</a></li>
-                <li><a ng-click="closeMenu()"  href="#" title="Stands">Stands</a></li>
-                <li><a ng-click="closeMenu()"  href="#/about" title="Biarq">Biarq</a></li>
+            <div class="menuWrp">
+                <div>
+                    <a ng-click="closeMenu()" class="teste" href="{{menu.link}}" title="{{menu.nome}}">{{menu.nome}}</a>
+                </div>
+                <div class="menuLinkAnim1"></div>
+                <div class="menuLinkAnim2"></div>
+            </div>
+
+            <div class="clear"></div>
+
+<!-- OLD MENU -->
+<!--            <ul>
+                <li><a ng-click="closeMenu()" href="#/home" title="home">Home</a></li>
+                <li><a ng-click="closeMenu()" href="#/portfolio" title="Portefólio">Portefólio</a></li>
+                <li><a ng-click="closeMenu()" href="#/view1" title="Em construção">Em construção</a></li>
+                <li><a ng-click="closeMenu()" href="#" title="Remodelações">Remodelações</a></li>
+                <li><a ng-click="closeMenu()" href="#" title="Stands">Stands</a></li>
+                <li><a ng-click="closeMenu()" href="#/about" title="Biarq">Biarq</a></li>
                 <li><a ng-click="closeMenu()" href="#/contactos" title="Contactos">Contactos</a></li>
+            </ul>-->
 
 
 
-            </ul>
         </div>
 
-
         <div class="clear"></div>
-    </div>
-</header>
 
-<div ng-view class="viewContent"></div>
+        <div id="homeImgTitleArea">
+            Paixão pela arquitectura mãeteto assado
+
+        </div>
+
+        <div class="bolasHeaderSliderWrp">
+            <div class="bolaHeaderSlider"></div>
+            <div class="bolaHeaderSlider"></div>
+            <div class="bolaHeaderSlider"></div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--
+
+<div>
+
+    <div change-header style="background-color: red">
+
+    </div>
+
+</div>-->
+
+
+<div ng-view class="viewContent question ">
+
+</div>
+
 
 <footer>
     <div class="footerContent">
@@ -82,17 +123,20 @@
 </footer>
 
 
-
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 <script src='bower_components/lodash/dist/lodash.underscore.min.js'></script>
 <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+
+<script src="bower_components/spin.js/spin.js"></script>
+<script src="bower_components/angular-spinner/angular-spinner.js"></script>
+
 
 <script src="app.js"></script>
 <script src="home/home.js"></script>
@@ -113,7 +157,19 @@
         $(".menuBtn").click(function () {
             $(".menus").slideToggle();
         });
+
+        // LINK TITLE TO UPPERCASE
+        $('a').attr('title', function(i, title) {
+            return title.toUpperCase(); });
+
+
+
     });
+
+
+
+
+
 </script>
 
 </body>

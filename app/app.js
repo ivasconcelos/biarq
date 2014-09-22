@@ -10,11 +10,17 @@ angular.module('biarq', [
   'myApp.portfolio',
   'myApp.version',
   'myApp.comon',
-  'google-maps'
+  'google-maps',
+  'ngAnimate',
+  'angularSpinner'
 
 
 
 ]).
+
+
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
+
+

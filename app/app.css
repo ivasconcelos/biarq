@@ -53,6 +53,7 @@ a:hover, .currentLink, .biarqColor {
     color: #8dbf41;
 }
 
+
 .clear {
     clear: both
 }
@@ -71,12 +72,19 @@ p {
 
 /* HEADER */
 
-header {
+
+
+.header {
     padding-top: 5px;
-    height: 480px;
-    background: #000000 url('img/headerBg.jpg') center 0 no-repeat;
+    height: 520px;
+
     width: 100%;
+    background: #000000 url('img/image-slider-3.jpg') center center no-repeat;
+
+
 }
+
+
 
 .logoBiarq {
     display: none;
@@ -96,9 +104,11 @@ header {
 
 /* HEADER SE FOR NUMA RESOLUÇAO GRANDE*/
 @media (min-width: 768px) {
-    header {
-        height: 220px;
+    .header {
         padding-top: 5%;
+        background-size: 100%;
+
+
     }
 
     .headerLogoWrp {
@@ -120,21 +130,66 @@ header {
     float: left;
     display: none;
     width: 100%;
-    background-color: #000000;
-    opacity: 0.7;
-    /*margin-top: 20px;*/
+    background:rgba(0,0,0,0.7);
+    box-sizing: border-box;
 }
 
-.menus ul {
+.menuWrp {
+
+    margin: 2px 10px;
     float: left;
-    min-width: 400px;
-    padding-left: 0;
-    margin-left: 0;
+    display: block;
+    width: 100%;
 }
 
-.menus li {
-    display: block;
-    padding: 10px;
+.menuLinkAnim1, .menuLinkAnim2 {
+
+    transition: all 0.6s;
+    border-top: 2px dotted #8dbf41;
+    height: 5px;
+    opacity: 0;
+    width: 1px;
+
+
+}
+
+.menuWrp:hover .menuLinkAnim1 {
+    transition: all 0.6s;
+    opacity: 1;
+    width: 95%;
+}
+
+.menuWrp:hover .menuLinkAnim2 {
+    transition: all 0.6s;
+    opacity: 1;
+    width: 95%;
+}
+
+
+@media (min-width: 768px) {
+    .menuWrp {
+
+        margin: 2px 10px;
+        float: left;
+        display: inline-block;
+        width: auto;
+    }
+
+    .menuWrp:hover .menuLinkAnim1 {
+        transition: all 0.2s;
+        width: 90%;
+    }
+
+    .menuWrp:hover .menuLinkAnim2 {
+        transition: all 0.2s;
+        width: 50%;
+    }
+
+    .menuLinkAnim1, .menuLinkAnim2 {
+        transition: all 0.2s;
+        margin: 0 auto;
+        border-top: 2px dotted #8dbf41;
+    }
 }
 
 .menuBtn {
@@ -155,19 +210,13 @@ header {
 }
 
 /* MENU -- SE FOR NUMA RESOLUÇÃO MAIOR */
-@media (min-width: 768px) {
+@media (min-width: 990px) {
 
     .menus {
         float: right;
-        margin-top: 45px;
+        margin-top: 90px;
         display: block;
         width: auto;
-        background-color: transparent;
-    }
-
-    .menus li {
-        display: inline;
-        margin-left: 20px;
         background-color: transparent;
     }
 
@@ -484,10 +533,81 @@ footer a {
     padding-bottom: 0;
 }
 
+/*HOME -- COMPETENCIAS AREA -- EXP  */
 .exp {
     display: inline-block;
-    width: 40px;
-    height: 15px;
-    background-color: #eeeeee;
-    margin-right: 20px;
+    width: 20px;
+    height: 16px;
+    /*background-color: #8dbf41;*/
+    background: url('/img/bq.png') center center;
+    margin-right: 8px;
 }
+
+.homeCompetenciasAreaContent .title2 {
+    color: #48474d;
+}
+
+.homeCompetenciasAreaContent h2 {
+    color: #bab9b9;
+}
+
+#homeImgTitleArea, .bolasHeaderSliderWrp, .bolaHeaderSlider {
+    display: none;
+}
+
+@media(min-width: 960px){
+    #homeImgTitleArea {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 40px;
+        height: 120px;
+
+
+        font-size: 60px;
+        line-height: 70px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 100;
+        text-transform: uppercase;
+
+
+    }
+
+
+    .bolasHeaderSliderWrp {
+        display: block;
+        width: 120px;
+        height: 20px;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+
+    .bolaHeaderSlider {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        border-radius: 20px;
+        float: left;
+        background-color: transparent;
+        border: 1px solid #8dbf41;
+    }
+
+    .bolaHeaderSlider:hover {
+        background-color: #8dbf41;
+        cursor: crosshair;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+#spinner{display: none;}
