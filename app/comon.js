@@ -84,6 +84,23 @@ angular.module('biarq.comon', [])
                         return wrapped;
                     }}
             });
-    }]);
+    }]).directive('autoHeight', ['$location',function($location) {
+    return {
+        restrict: 'AE',
+        link: function(scope, elem, attrs) {
+            scope.$on('$routeChangeSuccess', function () {
+                elem.css('margin-top','0')
+
+
+                if ($location.path()=="/home"){
+                    elem.css('margin-top','200px')
+
+                }
+            });
+        }
+
+
+
+}}]);
 
 
