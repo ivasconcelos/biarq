@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.contactos', [])
+angular.module('biarq.contactos', [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/contactos', {
-    templateUrl: 'contactos/contactos.html',
-    controller: 'contactosCtrl'
-  });
-}])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/contactos', {
+            templateUrl: 'contactos/contactos.html',
+            controller: 'contactosCtrl'
+        });
+    }])
 
-.controller('contactosCtrl', ['$scope',function($scope) {
+    .controller('contactosCtrl', ['$scope', function ($scope) {
         $scope.map = {
             center: {
                 latitude: 40.134295,
@@ -19,4 +19,4 @@ angular.module('myApp.contactos', [])
             zoom: 18
         };
 
-}]);
+    }]);

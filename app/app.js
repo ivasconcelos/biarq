@@ -2,27 +2,22 @@
 
 // Declare app level module which depends on views, and components
 angular.module('biarq', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.home',
-  'myApp.contactos',
-  'myApp.about',
-  'myApp.portfolio',
-  'myApp.version',
-  'myApp.comon',
-  'google-maps',
-  'ngAnimate',
-  'angularSpinner',
+    'ngRoute',
     'ngResource',
-    'ngSanitize'
+    'ngSanitize',
+    'ngAnimate',
+    'biarq.home',
+    'biarq.contactos',
+    'biarq.about',
+    'biarq.portfolio',
+    'biarq.comon',
+    'biarq.util',
+    'google-maps',
+    'angularSpinner'
 
 
-
-]).
-
-
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/home'});
-}]);
+]).config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.otherwise({redirectTo: '/home'});
+}]).value('apiAddr', 'http://localhost:8888');
 
 

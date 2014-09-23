@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.home', [])
+angular.module('biarq.home', [])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/home', {
-    templateUrl: 'home/home.html',
-    controller: 'homeCtrl'
-  });
-}])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/home', {
+            templateUrl: 'home/home.html',
+            controller: 'homeCtrl'
+        });
+    }])
 
-.controller('homeCtrl', ['$scope',function($scope) {
+    .controller('homeCtrl', ['$scope', function ($scope) {
 
-}]);
+    }]);

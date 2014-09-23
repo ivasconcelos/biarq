@@ -4,7 +4,7 @@
 'use strict;'
 
 //MODULO COMON -- CONTAINS COMON FUNCTIONS AND HELPER FUNCTIONS
-angular.module('myApp.comon', [])
+angular.module('biarq.comon', [])
 
     .controller('headerCtrl', ['$scope', '$location', 'Projectos', function ($scope, $location, Projectos) {
 
@@ -16,33 +16,14 @@ angular.module('myApp.comon', [])
             this.nome = nome;
         }
 
-        $scope.menu1 = new MainMenu();
-        $scope.menu1.link = "#/home";
-        $scope.menu1.nome = "home";
+        $scope.menu1 = new MainMenu("#/home", "home");
+        $scope.menu2 = new MainMenu("#/portfolio", "portefólio");
+        $scope.menu3 = new MainMenu("#/", "em construção");
+        $scope.menu4 = new MainMenu("#/", "remodelações");
+        $scope.menu5 = new MainMenu("#/", "stands");
+        $scope.menu6 = new MainMenu("#/about", "biarq");
+        $scope.menu7 = new MainMenu("#/contactos", "contactos");
 
-        $scope.menu2 = new MainMenu();
-        $scope.menu2.link = "#/portfolio";
-        $scope.menu2.nome = "portefólio";
-
-        $scope.menu3 = new MainMenu();
-        $scope.menu3.link = "#/";
-        $scope.menu3.nome = "em construção";
-
-        $scope.menu4 = new MainMenu();
-        $scope.menu4.link = "#/";
-        $scope.menu4.nome = "remodelações";
-
-        $scope.menu5 = new MainMenu();
-        $scope.menu5.link = "#/";
-        $scope.menu5.nome = "stands";
-
-        $scope.menu6 = new MainMenu();
-        $scope.menu6.link = "#/about";
-        $scope.menu6.nome = "biarq";
-
-        $scope.menu7 = new MainMenu();
-        $scope.menu7.link = "#/contactos";
-        $scope.menu7.nome = "contactos";
 
         $scope.mainMenu = [$scope.menu7, $scope.menu6, $scope.menu5, $scope.menu4, $scope.menu3, $scope.menu2, $scope.menu1];
 
@@ -56,18 +37,18 @@ angular.module('myApp.comon', [])
         }
     }
 
-    ]).factory('Projectos', ['$resource', function ($resource) {
-        return $resource('http://localhost:8888/project/:id', null,
+    ]).factory('Projectos', ['$resource', 'apiAddr', 'project', function ($resource, apiAddr, project) {
+        return $resource(apiAddr + '/project/:id', null,
             {
                 'all': {
                     method: 'get',
-                    url: 'http://localhost:8888/project/all/:number',
+                    url: apiAddr + '/project/all/:number',
                     isArray: true,
-                    transformResponse: function(data, header) {
+                    transformResponse: function (data, header) {
                         var wrapped = angular.fromJson(data);
-                        angular.forEach(wrapped, function(item, idx) {
+                        angular.forEach(wrapped, function (item, idx) {
 
-                            wrapped[idx] = new window.Projecto(item); //<-- replace each item with an instance of the resource object
+                            wrapped[idx] = new project(item); //<-- replace each item with an instance of the resource object
                         });
                         return wrapped;
                     }}
@@ -75,67 +56,3 @@ angular.module('myApp.comon', [])
     }]);
 
 
-/*   .directive('slider', ['$timeout',function ($timeout) {
- return {
- restrict: 'AE',
- replace: true,
- scope:{
- // images: '='
- },
- link: function (scope, elem, attrs) {
- scope.images = [{
- src: 'image-slider-3.jpg',
- title: 'Agora é que foi finalmententemente'
- }, {
- src: 'image-slider-5.jpg',
- title: 'ESteve difícil ... '
- }];
-
- scope.currentIndex=0;
-
- elem.css('background-image', 'url(img/' +scope.images[scope.currentIndex].src  +')');
-
-
- var homeImgTitle = scope.images[scope.currentIndex].title;
- $("#homeImgTitleArea").text(homeImgTitle);
-
- elem.toggleClass('foda');
-
-
- scope.next=function(){
-
- scope.currentIndex<scope.images.length-1?scope.currentIndex++:scope.currentIndex=0;
- elem.css('background-image', 'url(img/' +scope.images[scope.currentIndex].src  +')');
-
- elem.toggleClass('foda');
-
-
- var homeImgTitle = scope.images[scope.currentIndex].title;
- $("#homeImgTitleArea").text(homeImgTitle);
-
-
-
- };
-
- *//* Start: For Automatic slideshow*//*
- var timer;
-
- var sliderFunc=function(){
- timer=$timeout(function(){
- scope.next();
- timer=$timeout(sliderFunc,5000);
- },5000);
- };
-
- sliderFunc();
-
- scope.$on('$destroy',function(){
- $timeout.cancel(timer);
- });
-
- *//* End : For Automatic slideshow*//*
-
- }
- //templateUrl:'homeslider/templateurl.html'
- }
- }]);*/
