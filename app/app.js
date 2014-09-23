@@ -18,6 +18,6 @@ angular.module('biarq', [
 
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
-}]).value('apiAddr', 'http://localhost:8888');
+}]).value('apiAddr', 'http://192.168.1.64:8888');
 
 

@@ -6,7 +6,7 @@
 <!--[if IE 8]>
 <html lang="en" ng-app="biarq" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="biarq" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="biarq" class="no-js"  ng-cloak> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,7 +104,7 @@
 </div>-->
 
 
-<div ng-view class="viewContent question ">
+<div ng-view class="viewContent question slide-pop">
 
 </div>
 
@@ -126,6 +126,7 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
+<script src='components/jssor.slider.mini.js'></script>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
