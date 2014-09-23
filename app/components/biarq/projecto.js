@@ -121,15 +121,36 @@ angular.module('biarq.util', []).
             this.texto = obj.texto;
             this.titulo = obj.titulo;
 
-            this.url = function () {
+            this.url = function (prefix) {
                 var url = util.removeDiacritics(this.titulo);
                 url = util.findAndReplaceSpaces(url, "-")
                 url = url.replace(/[^a-zA-Z0-9-_]/g, '');
-                return "portfolio/" + url + "/" + this._id;
+                return prefix+"/" + url + "/" + this._id;
             }
         }
 
         return project;
+
+    }]).factory('remodelacoes', ['util', function (util) {
+
+        var remodelacoes = function (obj) {
+            this._id = obj._id;
+            this._keywords = obj._keywords;
+            this.foto = obj.foto;
+            this.fotonew = obj.fotonew;
+            this.fotoprincipal = obj.fotoprincipal;
+            this.texto = obj.texto;
+            this.titulo = obj.titulo;
+
+            this.url = function (prefix) {
+                var url = util.removeDiacritics(this.titulo);
+                url = util.findAndReplaceSpaces(url, "-")
+                url = url.replace(/[^a-zA-Z0-9-_]/g, '');
+                return prefix+"/" + url + "/" + this._id;
+            }
+        }
+
+        return remodelacoes;
     }]);
-;
+
 

@@ -13,11 +13,13 @@ angular.module('biarq', [
     'biarq.comon',
     'biarq.util',
     'google-maps',
-    'angularSpinner'
+    'angularSpinner',
+    'biarq.remodelacoes',
+    'biarq.construcao'
 
 
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
-}]).value('apiAddr', 'http://192.168.1.64:8888');
+}]).value('apiAddr', 'http://192.168.1.66:8888');
 
 

@@ -18,12 +18,11 @@ angular.module('biarq.comon', [])
 
         $scope.menu1 = new MainMenu("#/home", "home");
         $scope.menu2 = new MainMenu("#/portfolio", "portefólio");
-        $scope.menu3 = new MainMenu("#/", "em construção");
-        $scope.menu4 = new MainMenu("#/", "remodelações");
+        $scope.menu3 = new MainMenu("#/construcao", "em construção");
+        $scope.menu4 = new MainMenu("#/remodelacoes", "remodelações");
         $scope.menu5 = new MainMenu("#/", "stands");
         $scope.menu6 = new MainMenu("#/about", "biarq");
         $scope.menu7 = new MainMenu("#/contactos", "contactos");
-
 
         $scope.mainMenu = [$scope.menu7, $scope.menu6, $scope.menu5, $scope.menu4, $scope.menu3, $scope.menu2, $scope.menu1];
 
@@ -43,6 +42,38 @@ angular.module('biarq.comon', [])
                 'all': {
                     method: 'get',
                     url: apiAddr + '/project/all/:number',
+                    isArray: true,
+                    transformResponse: function (data, header) {
+                        var wrapped = angular.fromJson(data);
+                        angular.forEach(wrapped, function (item, idx) {
+
+                            wrapped[idx] = new project(item); //<-- replace each item with an instance of the resource object
+                        });
+                        return wrapped;
+                    }}
+            });
+    }]).factory('Remodelacoes', ['$resource', 'apiAddr', 'project', function ($resource, apiAddr, remodelacoes) {
+        return $resource(apiAddr + '/remodelacao/:id', null,
+            {
+                'all': {
+                    method: 'get',
+                    url: apiAddr + '/remodelacao/all/:number',
+                    isArray: true,
+                    transformResponse: function (data, header) {
+                        var wrapped = angular.fromJson(data);
+                        angular.forEach(wrapped, function (item, idx) {
+
+                            wrapped[idx] = new remodelacoes(item); //<-- replace each item with an instance of the resource object
+                        });
+                        return wrapped;
+                    }}
+            });
+    }]).factory('Construcao', ['$resource', 'apiAddr', 'project', function ($resource, apiAddr, project) {
+        return $resource(apiAddr + '/construcao/:id', null,
+            {
+                'all': {
+                    method: 'get',
+                    url: apiAddr + '/construcao/all/:number',
                     isArray: true,
                     transformResponse: function (data, header) {
                         var wrapped = angular.fromJson(data);

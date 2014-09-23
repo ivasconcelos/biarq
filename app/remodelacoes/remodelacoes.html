@@ -1,0 +1,46 @@
+<!-- REMODELAÇÕES PAGE WRAP -->
+<div class="pageAreaWrp" >
+
+    <!-- REMODELAÇÕES -->
+    <h2> Remodelações </h2>
+
+    <div class="pWrp animate-repeat" data-ng-repeat="remodelacoes in remodelacoes">
+
+        <!--REMODELAÇOES IMAGE -->
+        <div class="pImgWrp">
+            <a class="pImgLink" href="#/{{remodelacoes.url('remodelacoes')}}" title="{{remodelacoes.titulo}}">
+
+                <!-- BOLAS BRANCAS -->
+                <div class="bolasWrp">
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="clear"></div>
+                </div>
+
+            </a>
+
+            <!-- PROJECT IMG -->
+            <img data-ng-src="http://admin.biarq.com/img/projectos/grandes/{{remodelacoes.fotoprincipal}}" alt="{{remodelacoes.titulo}}" class="pImg">
+        </div>
+
+        <!--PROJECT TITLE -->
+        <p class="title2"> {{remodelacoes.titulo}} </p>
+
+        <!--PROJECT DESCRIPTION -->
+        <div class="pDesc">
+            <p  ng-bind-html="remodelacoes.texto"> </p>
+        </div>
+
+        <!--PROJECT BTN 'VER MAIS' -->
+        <div class="mainBtn">
+            <a href="#/{{remodelacoes.url('remodelacoes')}}" title="Ver Mais">Ver Mais</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <span us-spinner id="spinner"></span>
+</div>
+
+

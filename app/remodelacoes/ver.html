@@ -1,0 +1,64 @@
+<!-- VIEW SPECIFIC PROJECT PAGE WRAP -->
+<div class="pageAreaWrp" ng-cloak>
+
+    <p> isto sao as remodelacoes</p>
+
+
+    <h2 style="text-align: center"> {{remodelacoes.titulo}}</h2>
+
+    <!-- Jssor Slider Begin -->
+    <div id="slider1_container" class="sliderContainer">
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+        <!-- Slides Container -->
+        <div u="slides"  style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
+            <div  ng-repeat="foto in remodelacoes.foto">
+                <img u="image" ng-src="http://admin.biarq.com/img/projectos/grandes/{{foto}}" />
+                <img u="thumb" ng-src="http://admin.biarq.com/img/projectos/pequenas/{{foto}}" />
+            </div>
+
+        </div>
+
+
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 158px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 158px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+
+        <!-- Thumbnail Navigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 800px; height: 100px; left:0px; bottom: 0px;">
+
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="position: absolute; width: 72px; height: 72px; top: 0; left: 0;">
+                    <div class=w><thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate></div>
+                    <div class=c>
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Thumbnail Navigator Skin End -->
+
+    </div>
+    <!-- Jssor Slider End -->
+
+    <div class="verProjTxtWrp">
+        <p ng-bind-html="remodelacoes.texto"></p>
+    </div>
+
+</div>
+
+
+
+
+

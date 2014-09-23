@@ -1,0 +1,46 @@
+<!-- PORTFOLIO PAGE WRAP -->
+<div class="pageAreaWrp" >
+
+    <!-- PROJECT -->
+    <h2> Projectos </h2>
+
+    <div class="pWrp animate-repeat" data-ng-repeat="construcao in construcao">
+
+        <!--PPROJECT IMAGE -->
+        <div class="pImgWrp">
+            <a class="pImgLink" href="#/{{construcao.url('construcao')}}" title="{{construcao.titulo}}">
+
+                <!-- BOLAS BRANCAS -->
+                <div class="bolasWrp">
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="clear"></div>
+                </div>
+
+            </a>
+
+            <!-- PROJECT IMG -->
+            <img data-ng-src="http://admin.biarq.com/img/projectos/grandes/{{construcao.fotoprincipal}}" alt="{{construcao.titulo}}" class="pImg">
+        </div>
+
+        <!--PROJECT TITLE -->
+        <p class="title2"> {{construcao.titulo}} </p>
+
+        <!--PROJECT DESCRIPTION -->
+        <div class="pDesc">
+            <p  ng-bind-html="construcao.texto"> </p>
+        </div>
+
+        <!--PROJECT BTN 'VER MAIS' -->
+        <div class="mainBtn">
+            <a href="#/{{construcao.url('construcao')}}" title="Ver Mais">Ver Mais</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <span us-spinner id="spinner"></span>
+</div>
+
+
