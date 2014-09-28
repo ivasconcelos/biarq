@@ -20,6 +20,16 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <style>
+        .ui-show {
+            color: blue;
+            transition: all 0.5s ease; /* You should probably browser-prefix this */
+        }
+        .ui-hide {
+            opacity: 0;
+            transition: all 0.5s ease; /* You should probably browser-prefix this */
+        }
+    </style>
 
 </head>
 <body ng-controller="headerCtrl">
@@ -34,7 +44,7 @@
 
     <div class="headerContent">
 
-        <div class="menuBtn" title="Menu" toogle-menu>
+        <div class="menuBtn" title="Menu">
             <div class="slashMenuBtn"></div>
             <div class="slashMenuBtn"></div>
             <div class="slashMenuBtn"></div>
@@ -47,7 +57,8 @@
             </a>
         </div>
 
-        <div class="menus" ng-repeat="menu in mainMenu">
+
+        <div  class="menus" ng-repeat="menu in mainMenu">
 
             <div class="menuWrp">
                 <div>
@@ -137,6 +148,7 @@
 <script src='bower_components/lodash/dist/lodash.underscore.min.js'></script>
 <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
 
+
 <script src="bower_components/spin.js/spin.js"></script>
 <script src="bower_components/angular-spinner/angular-spinner.js"></script>
 
@@ -155,11 +167,13 @@
 
 
 <script>
+
     $(document).ready(function () {
         $(".menuBtn").click(function () {
             $(".menus").slideToggle();
         });
     });
+
 
 
 

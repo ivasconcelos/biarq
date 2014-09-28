@@ -31,14 +31,6 @@ angular.module('biarq.construcao', ['ngRoute'])
 
 
 
-        // SPINNER
-        $(window).scroll(function () {
-
-            if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
-                document.getElementById('spinner').style.display = "block";
-
-            }
-        });
 
 
     }])

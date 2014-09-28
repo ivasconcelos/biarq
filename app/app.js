@@ -18,8 +18,9 @@ angular.module('biarq', [
     'biarq.construcao'
 
 
+
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
-}]).value('apiAddr', 'http://192.168.1.66:8888');
+}]).value('apiAddr', 'http://api.biarq.com');
 
 

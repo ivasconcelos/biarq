@@ -14,13 +14,37 @@ angular.module('biarq.portfolio', ['ngRoute'])
     }])
 
     .controller('portfolioCtrl', ['$scope', 'Projectos','$timeout', function ($scope, Projectos,$timeout) {
+        $scope.skip=0
+        $scope.limit=6
+        $scope.canload=true
         $scope.projectos = []
 
-        $timeout(function() {
-            Projectos.all({ number: 9 },
+        $scope.next=function(){
+            Projectos.next({skip:$scope.skip, limit:$scope.limit},
                 function (data) {
                     // success handler
-                    $scope.projectos=data
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.projectos.push(data[i]);
+                    }
+                    $scope.skip+=data.length
+
+                    console.log(data)
+                }, function (error) {
+                    // error handler
+                    console.log(error)
+                }
+            )
+
+        }
+
+        $timeout(function() {
+            Projectos.next({skip:$scope.skip, limit:$scope.limit},
+                function (data) {
+                    // success handler
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.projectos.push(data[i]);
+                    }
+                    $scope.skip+=data.length
 
                     console.log(data)
                 }, function (error) {
@@ -31,14 +55,6 @@ angular.module('biarq.portfolio', ['ngRoute'])
 
 
 
-        // SPINNER
-        $(window).scroll(function () {
-
-            if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
-                document.getElementById('spinner').style.display = "block";
-
-            }
-        });
 
 
     }])

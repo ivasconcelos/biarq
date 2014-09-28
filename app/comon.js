@@ -39,9 +39,9 @@ angular.module('biarq.comon', [])
     ]).factory('Projectos', ['$resource', 'apiAddr', 'project', function ($resource, apiAddr, project) {
         return $resource(apiAddr + '/project/:id', null,
             {
-                'all': {
+                'next': {
                     method: 'get',
-                    url: apiAddr + '/project/all/:number',
+                    url: apiAddr + '/project/next/:skip/:limit',
                     isArray: true,
                     transformResponse: function (data, header) {
                         var wrapped = angular.fromJson(data);
