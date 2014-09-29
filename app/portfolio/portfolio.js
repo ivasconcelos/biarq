@@ -222,6 +222,22 @@ angular.module('biarq.portfolio', ['ngRoute'])
             //}
             //responsive code end
         };
-    }]).constant('$JssorUtils', window.$JssorUtils);
+    }]).constant('$JssorUtils', window.$JssorUtils)
+    .directive('imagesGallery', function () {
+        return {
+            restrict: 'EA', //E = element, A = attribute, C = class, M = comment
+            scope: {
+                //@ reads the attribute value, = provides two-way binding, & works with functions
+                projects: '@'         },
+                template: '<div  ng-repeat="foto in projects  track by $index"><img u="image" src="http://admin.biarq.com/img/projectos/grandes/{{foto}}" /><img u="thumb" src="http://admin.biarq.com/img/projectos/pequenas/{{foto}}" /></div>',
+                       //   templateUrl: 'mytemplate.html',
+           // controller: controllerFunction, //Embed a custom controller in the directive
+            link: function ($scope, element, attrs) {
+               // alert("dass")
+               //
+               } //DOM manipulation
+
+        }
+    });
 
 
