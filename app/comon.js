@@ -48,7 +48,6 @@ angular.module('biarq.comon', [])
                         angular.forEach(wrapped, function (item, idx) {
 
                             wrapped[idx] = new project(item); //<-- replace each item with an instance of the resource object
-                            wrapped[idx].texto= wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
                         });
                         return wrapped;
                     }}
@@ -94,7 +93,7 @@ angular.module('biarq.comon', [])
 
 
                 if ($location.path()=="/home"){
-                    elem.css('margin-top','20px')
+                    elem.css('margin-top','200px')
 
                 }
             });
