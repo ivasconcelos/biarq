@@ -74,10 +74,8 @@ p {
 .header {
     padding-top: 5px;
     height: 520px;
-
     width: 100%;
-    background: #000000 url('img/image-slider-3.jpg') center center no-repeat;
-
+    background: #000000 url('img/image-slider-3.jpg') center center no-repeat
 }
 
 .logoBiarq {
@@ -130,9 +128,7 @@ p {
 .menuWrp {
 
     margin: 2px 10px;
-    float: left;
-    display: block;
-    width: 100%;
+    display: inline-block;
 }
 
 .menuLinkAnim1, .menuLinkAnim2 {
@@ -145,24 +141,18 @@ p {
 
 }
 
-.menuWrp:hover .menuLinkAnim1 {
+.menuWrp:hover .menuLinkAnim1, .menuWrp:hover .menuLinkAnim2 {
     transition: all 0.6s;
     opacity: 1;
     width: 95%;
 }
 
-.menuWrp:hover .menuLinkAnim2 {
-    transition: all 0.6s;
-    opacity: 1;
-    width: 95%;
-}
 
 @media (min-width: 768px) {
     .menuWrp {
 
         margin: 2px 10px;
         float: left;
-        display: inline-block;
         width: auto;
     }
 
@@ -205,7 +195,7 @@ p {
 
     .menus {
         float: right;
-        margin-top: 90px;
+        margin-top: 70px;
         display: block;
         width: auto;
         background-color: transparent;
@@ -589,9 +579,9 @@ footer a {
 
 }
 
-#spinner {
+/*#spinner {
     display: none;
-}
+}*/
 
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
@@ -760,4 +750,24 @@ footer a {
     height: 456px;
     background: #191919;
     overflow: hidden;
+}
+
+
+.bigHeader {
+    height: 520px;
+
+}
+
+.smallHeader {
+    height: 220px;
+    background: #000000 url('img/image-slider-1.jpg') center 0 no-repeat;
+}
+
+
+.bigHeader .bigHeaderContent {
+    display: block;
+}
+
+.smallHeader .bigHeaderContent {
+    display: none;
 }
