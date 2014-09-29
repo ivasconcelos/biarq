@@ -48,7 +48,7 @@ angular.module('biarq.comon', [])
                         angular.forEach(wrapped, function (item, idx) {
 
                             wrapped[idx] = new project(item); //<-- replace each item with an instance of the resource object
-                            wrapped[idx].texto= wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
+                            wrapped[idx].texto = wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
                         });
                         return wrapped;
                     }}
@@ -65,7 +65,7 @@ angular.module('biarq.comon', [])
                         angular.forEach(wrapped, function (item, idx) {
 
                             wrapped[idx] = new remodelacoes(item); //<-- replace each item with an instance of the resource object
-                            wrapped[idx].texto= wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
+                            wrapped[idx].texto = wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
                         });
                         return wrapped;
                     }}
@@ -82,28 +82,31 @@ angular.module('biarq.comon', [])
                         angular.forEach(wrapped, function (item, idx) {
 
                             wrapped[idx] = new project(item); //<-- replace each item with an instance of the resource object
-                            wrapped[idx].texto= wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
+                            wrapped[idx].texto = wrapped[idx].texto.replace(/<(?:.|\n)*?>/gm, '');
                         });
                         return wrapped;
                     }}
             });
-    }]).directive('autoHeight', ['$location',function($location) {
-    return {
-        restrict: 'AE',
-        link: function(scope, elem, attrs) {
-            scope.$on('$routeChangeSuccess', function () {
-                elem.css('margin-top','0')
+    }]).directive('autoHeight', ['$location', function ($location) {
+        return {
+            restrict: 'AE',
+            link: function (scope, elem, attrs) {
+                scope.$on('$routeChangeSuccess', function () {
+                    elem.removeClass('bigHeader smallHeader');
+                    elem.addClass('bigHeader');
 
 
-                if ($location.path()=="/home"){
-                    elem.css('margin-top','200px')
+                    if (($location.path() != "/home") && (screen.width > 768)) {
 
-                }
-            });
+                        elem.removeClass('bigHeader smallHeader');
+                        elem.addClass('smallHeader');
+                    }
+                });
+            }
+
+
+
         }
-
-
-
-}}]);
+    }]);
 
 
