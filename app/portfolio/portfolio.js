@@ -15,7 +15,7 @@ angular.module('biarq.portfolio', ['ngRoute'])
 
     .controller('portfolioCtrl', ['$scope', 'Projectos','$timeout', function ($scope, Projectos,$timeout) {
         $scope.skip=0
-        $scope.limit=6
+        $scope.limit=3
         $scope.canload=true
         $scope.projectos = []
 

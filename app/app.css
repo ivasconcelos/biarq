@@ -13,7 +13,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -76,6 +76,25 @@ p {
     height: 520px;
     width: 100%;
     background: #000000 url('img/image-slider-3.jpg') center center no-repeat
+}
+
+.bigHeader {
+    height: 520px;
+
+}
+
+.smallHeader {
+    height: 220px;
+    background: #000000 url('img/image-slider-1.jpg') center 0 no-repeat;
+}
+
+
+.bigHeader .bigHeaderContent {
+    display: block;
+}
+
+.smallHeader .bigHeaderContent {
+    display: none;
 }
 
 .logoBiarq {
@@ -366,9 +385,9 @@ footer a {
 
 @media (min-width: 768px) {
     .pWrp {
-        width: 31%;
+        width: 31.5%;
         float: left;
-        margin-right: 2%;
+        margin: 0 10px 60px 10px;
 
     }
 
@@ -740,34 +759,45 @@ footer a {
 }
 
 
-
+/* passagem de css inline do codigo da galeria para classes aqui*/
 .sliderContainer {
     /*position: relative; top: 0px; left: 0px;*/
     position: relative;
     margin:0 auto;
-    width: 100%;
-    max-width: 800px;
+   /* width: 100%;*/
+    /*max-width: 800px;*/
+    width: 800px;
     height: 456px;
     background: #191919;
     overflow: hidden;
+    box-shadow: -10px -10px 20px #888888;
+    box-sizing: border-box;
+}
+
+.sliderContainerChild1 {
+    position: absolute; top: 0px; left: 0px;
+}
+
+.sliderContainerChild2 {
+    filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;
 }
 
 
-.bigHeader {
-    height: 520px;
+.sliderContainerChild3 {position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+top: 0px; left: 0px;width: 100%;height:100%;}
+
+
+.sliderContainerChild4{
+    cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;
+}
+
+
+.sliderContainerChild5{
+    position: absolute; width: 800px; height: 100px; left:0px; bottom: -13px;
 
 }
 
-.smallHeader {
-    height: 220px;
-    background: #000000 url('img/image-slider-1.jpg') center 0 no-repeat;
-}
-
-
-.bigHeader .bigHeaderContent {
-    display: block;
-}
-
-.smallHeader .bigHeaderContent {
-    display: none;
+.sliderContainerChild6{
+    position: absolute; width: 72px; height: 72px; top: 0; left: 0;
 }
