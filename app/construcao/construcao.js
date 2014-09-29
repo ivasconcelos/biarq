@@ -16,7 +16,7 @@ angular.module('biarq.construcao', ['ngRoute'])
     .controller('construcaoCtrl', ['$scope', 'Construcao','$timeout', function ($scope, Construcao,$timeout) {
         $scope.construcao = []
         $scope.skip=0
-        $scope.limit=2
+        $scope.limit=3
         $scope.canload=true
 
         $scope.next=function(){
