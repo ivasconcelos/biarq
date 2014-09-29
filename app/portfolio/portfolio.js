@@ -19,6 +19,7 @@ angular.module('biarq.portfolio', ['ngRoute'])
         $scope.canload=true
         $scope.projectos = []
 
+
         $scope.next=function(){
             Projectos.next({skip:$scope.skip, limit:$scope.limit},
                 function (data) {
@@ -34,6 +35,7 @@ angular.module('biarq.portfolio', ['ngRoute'])
                     console.log(error)
                 }
             )
+
 
         }
 
@@ -52,6 +54,42 @@ angular.module('biarq.portfolio', ['ngRoute'])
                     console.log(error)
                 });
         });
+
+
+
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+
+                    Projectos.next({skip:$scope.skip, limit:$scope.limit},
+                        function (data) {
+                            // success handler
+                            for (var i = 0; i < data.length; i++) {
+                                $scope.projectos.push(data[i]);
+                            }
+                            $scope.skip+=data.length
+
+                            console.log(data)
+                        }, function (error) {
+                            // error handler
+                            console.log(error)
+                        }
+
+
+                    )
+
+
+
+                    // you're at the bottom of the page
+                }
+            };
+
+        $scope.$on("$destroy", function() {
+            window.onscroll=function(){
+
+            }
+
+        });
+
 
 
 
