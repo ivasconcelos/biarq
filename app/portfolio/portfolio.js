@@ -29,7 +29,7 @@ angular.module('biarq.portfolio', ['ngRoute'])
                     }
                     $scope.skip+=data.length
 
-                    console.log(data)
+
                 }, function (error) {
                     // error handler
                     console.log(error)
@@ -40,42 +40,14 @@ angular.module('biarq.portfolio', ['ngRoute'])
         }
 
         $timeout(function() {
-            Projectos.next({skip:$scope.skip, limit:$scope.limit},
-                function (data) {
-                    // success handler
-                    for (var i = 0; i < data.length; i++) {
-                        $scope.projectos.push(data[i]);
-                    }
-                    $scope.skip+=data.length
-
-                    console.log(data)
-                }, function (error) {
-                    // error handler
-                    console.log(error)
-                });
+            $scope.next();
         });
 
 
 
             window.onscroll = function(ev) {
                 if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-
-                    Projectos.next({skip:$scope.skip, limit:$scope.limit},
-                        function (data) {
-                            // success handler
-                            for (var i = 0; i < data.length; i++) {
-                                $scope.projectos.push(data[i]);
-                            }
-                            $scope.skip+=data.length
-
-                            console.log(data)
-                        }, function (error) {
-                            // error handler
-                            console.log(error)
-                        }
-
-
-                    )
+                    $scope.next();
 
 
 

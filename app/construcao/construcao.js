@@ -15,19 +15,56 @@ angular.module('biarq.construcao', ['ngRoute'])
 
     .controller('construcaoCtrl', ['$scope', 'Construcao','$timeout', function ($scope, Construcao,$timeout) {
         $scope.construcao = []
+        $scope.skip=0
+        $scope.limit=2
+        $scope.canload=true
 
-        $timeout(function() {
-            Construcao.all({ number: 9 },
+        $scope.next=function(){
+            Construcao.next({skip:$scope.skip, limit:$scope.limit},
                 function (data) {
                     // success handler
-                    $scope.construcao=data
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.construcao.push(data[i]);
+                    }
+                    $scope.skip+=data.length
 
-                    console.log(data)
+
                 }, function (error) {
                     // error handler
                     console.log(error)
-                });
+                })
+
+        }
+
+
+
+        $timeout(function() {
+            $scope.next();
         });
+
+        $timeout(function() {
+            $scope.next();
+        });
+
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+
+                $scope.next()
+
+
+
+                // you're at the bottom of the page
+            }
+        };
+
+        $scope.$on("$destroy", function() {
+            window.onscroll=function(){
+
+            }
+
+        });
+
+
 
 
 

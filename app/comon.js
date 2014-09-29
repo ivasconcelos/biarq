@@ -59,9 +59,9 @@ angular.module('biarq.comon', [])
     ]).factory('Remodelacoes', ['$resource', 'apiAddr', 'project',
         function($resource, apiAddr, remodelacoes) {
             return $resource(apiAddr + '/remodelacao/:id', null, {
-                'all': {
+                'next': {
                     method: 'get',
-                    url: apiAddr + '/remodelacao/all/:number',
+                    url: apiAddr + '/remodelacao/next/:skip/:limit',
                     isArray: true,
                     transformResponse: function(data, header) {
                         var wrapped = angular.fromJson(data);
@@ -78,9 +78,9 @@ angular.module('biarq.comon', [])
     ]).factory('Construcao', ['$resource', 'apiAddr', 'project',
         function($resource, apiAddr, project) {
             return $resource(apiAddr + '/construcao/:id', null, {
-                'all': {
+                'next': {
                     method: 'get',
-                    url: apiAddr + '/construcao/all/:number',
+                    url: apiAddr + '/construcao/next/:skip/:limit',
                     isArray: true,
                     transformResponse: function(data, header) {
                         var wrapped = angular.fromJson(data);
