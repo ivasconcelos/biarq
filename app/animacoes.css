@@ -1,0 +1,181 @@
+
+
+/* ANIMACOES MARCELO */
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    -webkit-transition:all linear 1s;
+    transition:all linear 1s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+.slide-pop.ng-enter,
+.slide-pop.ng-leave {
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+.slide-pop.ng-enter {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+}
+.slide-pop.ng-enter-active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.slide-pop.ng-leave {
+    left: 0;
+    opacity: .5;
+}
+.slide-pop.ng-leave-active {
+    left: -100%;
+    opacity: 0;
+}
+
+.reverse .page.slide-pop.ng-enter {
+    opacity: .5;
+    left: -100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.reverse .page.slide-pop.ng-enter-active {
+    opacity: 1;
+    left: 0;
+}
+.reverse .page.slide-pop.ng-leave {
+    opacity: .5;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    left: 0;
+    right: 0;
+}
+.reverse .page.slide-pop.ng-leave-active {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+}
+
+
+/* GALERIA DO MARCELO*/
+.jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn
+{
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../img/a17.png) no-repeat;
+    overflow:hidden;
+}
+.jssora05l { background-position: -10px -40px; }
+.jssora05r { background-position: -70px -40px; }
+.jssora05l:hover { background-position: -130px -40px; }
+.jssora05r:hover { background-position: -190px -40px; }
+.jssora05ldn { background-position: -250px -40px; }
+.jssora05rdn { background-position: -310px -40px; }
+
+
+.jssort01 .w {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.jssort01 .c {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 68px;
+    height: 68px;
+    border: #000 2px solid;
+}
+
+.jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+    background: url(../img/t01.png) center center;
+    border-width: 0px;
+    top: 2px;
+    left: 2px;
+    width: 68px;
+    height: 68px;
+}
+
+.jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    border: #fff 1px solid;
+}
+
+
+/* passagem de css inline do codigo da galeria para classes aqui*/
+.sliderContainer {
+    /*position: relative; top: 0px; left: 0px;*/
+    position: relative;
+    margin:0 auto;
+    /* width: 100%;*/
+    /*max-width: 800px;*/
+    width: 800px;
+    height: 456px;
+    background: #191919;
+    overflow: hidden;
+    box-shadow: -10px -10px 20px #888888;
+    box-sizing: border-box;
+}
+
+.sliderContainerChild1 {
+    position: absolute; top: 0px; left: 0px;
+}
+
+.sliderContainerChild2 {
+    filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;
+}
+
+
+.sliderContainerChild3 {position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+    top: 0px; left: 0px;width: 100%;height:100%;}
+
+
+.sliderContainerChild4{
+    cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;
+}
+
+
+.sliderContainerChild5{
+    position: absolute; width: 800px; height: 100px; left:0px; bottom: -13px;
+
+}
+
+.sliderContainerChild6{
+    position: absolute; width: 72px; height: 72px; top: 0; left: 0;
+}

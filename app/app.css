@@ -61,6 +61,10 @@ a:hover, .currentLink, .biarqColor {
     float: left;
 }
 
+.pullRight {
+    float: right;
+}
+
 .margRight50 {
     margin-right: 50px;
 }
@@ -91,6 +95,10 @@ p {
 
 .bigHeader .bigHeaderContent {
     display: block;
+}
+
+.bigHeaderContent {
+    margin-top: 60px;
 }
 
 .smallHeader .bigHeaderContent {
@@ -136,62 +144,10 @@ p {
     display: block;
 }
 
-.menus {
-    float: left;
-    display: none;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    box-sizing: border-box;
-}
 
-.menuWrp {
+/* NAV MENU -- MOBILE */
 
-    margin: 2px 10px;
-    display: inline-block;
-}
-
-.menuLinkAnim1, .menuLinkAnim2 {
-
-    transition: all 0.6s;
-    border-top: 2px dotted #8dbf41;
-    height: 5px;
-    opacity: 0;
-    width: 1px;
-
-}
-
-.menuWrp:hover .menuLinkAnim1, .menuWrp:hover .menuLinkAnim2 {
-    transition: all 0.6s;
-    opacity: 1;
-    width: 95%;
-}
-
-
-@media (min-width: 768px) {
-    .menuWrp {
-
-        margin: 2px 10px;
-        float: left;
-        width: auto;
-    }
-
-    .menuWrp:hover .menuLinkAnim1 {
-        transition: all 0.2s;
-        width: 90%;
-    }
-
-    .menuWrp:hover .menuLinkAnim2 {
-        transition: all 0.2s;
-        width: 50%;
-    }
-
-    .menuLinkAnim1, .menuLinkAnim2 {
-        transition: all 0.2s;
-        margin: 0 auto;
-        border-top: 2px dotted #8dbf41;
-    }
-}
-
+/* NAV MENU BTN (só visivel em MOBILE) */
 .menuBtn {
     border: 1px solid #999999;
     border-radius: 3px;
@@ -201,30 +157,82 @@ p {
     margin: 0 5px 5px 0;
     cursor: pointer;
 }
-
 .slashMenuBtn {
     background-color: #ffffff;
     width: 20px;
     height: 2px;
     margin: 5px 10px;
 }
+#navMenuWrp, .fechaMenu {
+    transition: all 0.5s;
+    background: rgba(0, 0, 0, 0.7);
+    height:0;
+    opacity: 0;
+    padding: 10px 0;
+}
 
-/* MENU -- SE FOR NUMA RESOLUÇÃO MAIOR */
-@media (min-width: 990px) {
+.abreMenu {
+    transition: all 0.5s !important;
+    height:290px !important;
+    opacity: 1 !important;
+}
 
-    .menus {
+.navMenuItem {
+    margin: 5px 10px;
+}
+
+/* animações NAV MENU */
+.menuLinkAnim1, .menuLinkAnim2 {
+    transition: all 0.6s;
+    border-top: 2px dotted #8dbf41;
+    height: 5px;
+    opacity: 0;
+    width: 1px;
+}
+.navMenuItem:hover .menuLinkAnim1, .navMenuItem:hover .menuLinkAnim2 {
+    transition: all 0.6s;
+    opacity: 1;
+    width: 30%;}
+
+
+/* NAV MENU : RESOLUCAO MAIOR */
+@media (min-width: 768px) {
+
+    .navMenuAlign{
         float: right;
-        margin-top: 70px;
-        display: block;
-        width: auto;
-        background-color: transparent;
     }
 
     .menuBtn {
         display: none;
     }
 
+    .navMenuItem {
+        float: left;
+        margin-top: 80px;
+    }
+
+    #navMenuWrp {
+        transition: none !important;
+        background-color:transparent;
+        height:100px !important;
+        opacity: 1 !important;
+
+    }
+    .navMenuItem:hover .menuLinkAnim1 {
+        transition: all 0.2s;
+        width: 90%;
+    }
+    .navMenuItem:hover .menuLinkAnim2 {
+        transition: all 0.2s;
+        width: 50%;
+    }
+    .menuLinkAnim1, .menuLinkAnim2 {
+        transition: all 0.2s;
+        margin: 0 auto;
+        border-top: 2px dotted #8dbf41;
+    }
 }
+
 
 /* FOOTER */
 footer {
@@ -393,6 +401,8 @@ footer a {
 
 }
 
+
+
 .pImgLink {
     width: 100%;
     height: 98%;
@@ -526,10 +536,9 @@ footer a {
     margin: 0 auto;
     padding: 50px 5px 50px 5px;
     box-sizing: border-box;
-
 }
 
-.homeProjectArea, .homeCompetenciasAreaContent {
+.homeCompetenciasAreaContent {
     padding-bottom: 0;
 }
 
@@ -562,14 +571,12 @@ footer a {
         margin: 0 auto;
         padding-top: 40px;
         height: 120px;
-
         font-size: 60px;
         line-height: 70px;
         color: #ffffff;
         text-align: center;
         font-weight: 100;
         text-transform: uppercase;
-
     }
 
     .bolasHeaderSliderWrp {
@@ -596,208 +603,10 @@ footer a {
         cursor: crosshair;
     }
 
-}
-
-/*#spinner {
-    display: none;
-}*/
-
-.animate-repeat.ng-move,
-.animate-repeat.ng-enter,
-.animate-repeat.ng-leave {
-    -webkit-transition:all linear 1s;
-    transition:all linear 1s;
-}
-
-.animate-repeat.ng-leave.ng-leave-active,
-.animate-repeat.ng-move,
-.animate-repeat.ng-enter {
-    opacity:0;
+    .homeProjectArea {
+        padding: 0;
+    }
 
 }
 
-.animate-repeat.ng-leave,
-.animate-repeat.ng-move.ng-move-active,
-.animate-repeat.ng-enter.ng-enter-active {
-    opacity:1;
 
-}
-
-.slide-pop.ng-enter,
-.slide-pop.ng-leave {
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-}
-.slide-pop.ng-enter {
-    opacity: 0;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -ms-transform: scale(.5);
-    -o-transform: scale(.5);
-    transform: scale(.5);
-}
-.slide-pop.ng-enter-active {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-}
-.slide-pop.ng-leave {
-    left: 0;
-    opacity: .5;
-}
-.slide-pop.ng-leave-active {
-    left: -100%;
-    opacity: 0;
-}
-
-.reverse .page.slide-pop.ng-enter {
-    opacity: .5;
-    left: -100%;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-}
-.reverse .page.slide-pop.ng-enter-active {
-    opacity: 1;
-    left: 0;
-}
-.reverse .page.slide-pop.ng-leave {
-    opacity: .5;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    left: 0;
-    right: 0;
-}
-.reverse .page.slide-pop.ng-leave-active {
-    opacity: 0;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -ms-transform: scale(.5);
-    -o-transform: scale(.5);
-    transform: scale(.5);
-}
-
-
-/* GALERIA DO MARCELO*/
-/*Arrow Navigator Skin Begin */
-
-     /* jssor slider arrow navigator skin 05 css */
-     /*
-     .jssora05l              (normal)
-     .jssora05r              (normal)
-     .jssora05l:hover        (normal mouseover)
-     .jssora05r:hover        (normal mouseover)
-     .jssora05ldn            (mousedown)
-     .jssora05rdn            (mousedown)
-     */
- .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn
- {
-     position: absolute;
-     cursor: pointer;
-     display: block;
-     background: url(../img/a17.png) no-repeat;
-     overflow:hidden;
- }
-.jssora05l { background-position: -10px -40px; }
-.jssora05r { background-position: -70px -40px; }
-.jssora05l:hover { background-position: -130px -40px; }
-.jssora05r:hover { background-position: -190px -40px; }
-.jssora05ldn { background-position: -250px -40px; }
-.jssora05rdn { background-position: -310px -40px; }
-
-
-     /* jssor slider thumbnail navigator skin 01 css */
-     /*
-     .jssort01 .p           (normal)
-     .jssort01 .p:hover     (normal mouseover)
-     .jssort01 .pav           (active)
-     .jssort01 .pav:hover     (active mouseover)
-     .jssort01 .pdn           (mousedown)
-     */
- .jssort01 .w {
-     position: absolute;
-     top: 0px;
-     left: 0px;
-     width: 100%;
-     height: 100%;
- }
-
-.jssort01 .c {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 68px;
-    height: 68px;
-    border: #000 2px solid;
-}
-
-.jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
-    background: url(../img/t01.png) center center;
-    border-width: 0px;
-    top: 2px;
-    left: 2px;
-    width: 68px;
-    height: 68px;
-}
-
-.jssort01 .p:hover .c, .jssort01 .pav:hover .c {
-    top: 0px;
-    left: 0px;
-    width: 70px;
-    height: 70px;
-    border: #fff 1px solid;
-}
-
-
-/* passagem de css inline do codigo da galeria para classes aqui*/
-.sliderContainer {
-    /*position: relative; top: 0px; left: 0px;*/
-    position: relative;
-    margin:0 auto;
-   /* width: 100%;*/
-    /*max-width: 800px;*/
-    width: 800px;
-    height: 456px;
-    background: #191919;
-    overflow: hidden;
-    box-shadow: -10px -10px 20px #888888;
-    box-sizing: border-box;
-}
-
-.sliderContainerChild1 {
-    position: absolute; top: 0px; left: 0px;
-}
-
-.sliderContainerChild2 {
-    filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;
-}
-
-
-.sliderContainerChild3 {position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-top: 0px; left: 0px;width: 100%;height:100%;}
-
-
-.sliderContainerChild4{
-    cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;
-}
-
-
-.sliderContainerChild5{
-    position: absolute; width: 800px; height: 100px; left:0px; bottom: -13px;
-
-}
-
-.sliderContainerChild6{
-    position: absolute; width: 72px; height: 72px; top: 0; left: 0;
-}

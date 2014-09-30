@@ -10,8 +10,20 @@ angular.module('biarq.comon', [])
         function($scope, $location, Projectos) {
 
 
+            //CLOSE and OPEN || TOGGLE || MENU IN MOBILE
+            var menu = document.getElementById('navMenuWrp');
+            var aberto = false;
+            $scope.toggle= function() {
+                if (aberto) {
+                menu.className = 'fechaMenu';
+            }else{
+                menu.className = 'abreMenu';
+            }
+            aberto = !aberto
+        }
 
-            //Links Header
+
+            //NAV Links Header
             var MainMenu = function(link, nome) {
                 this.link = link;
                 this.nome = nome;
@@ -25,16 +37,10 @@ angular.module('biarq.comon', [])
             $scope.menu6 = new MainMenu("#/about", "biarq");
             $scope.menu7 = new MainMenu("#/contactos", "contactos");
 
-            $scope.mainMenu = [$scope.menu7, $scope.menu6, $scope.menu5, $scope.menu4, $scope.menu3, $scope.menu2, $scope.menu1];
+            $scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu3, $scope.menu4, $scope.menu5, $scope.menu6, $scope.menu7];
 
 
-            //CLOSE MENU IN MOBILE
-            $scope.closeMenu = function() {
-                if (window.innerWidth >= 768) {
-                    return
-                }
-                $(".menus").slideToggle();
-            }
+
         }
 
     ]).factory('Projectos', ['$resource', 'apiAddr', 'project',
