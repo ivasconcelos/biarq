@@ -122,7 +122,7 @@ p {
 }
 
 /* HEADER SE FOR NUMA RESOLUÇAO GRANDE*/
-@media (min-width: 768px) {
+@media (min-width: 990px) {
     .header {
         padding-top: 5%;
         background-size: 100%;
@@ -196,7 +196,7 @@ p {
 
 
 /* NAV MENU : RESOLUCAO MAIOR */
-@media (min-width: 768px) {
+@media (min-width: 990px) {
 
     .navMenuAlign{
         float: right;
@@ -564,13 +564,16 @@ footer a {
     display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 990px) {
     #homeImgTitleArea {
         display: block;
         width: 960px;
         margin: 0 auto;
         padding-top: 40px;
         height: 120px;
+    }
+
+    #homeImgTitleArea h2{
         font-size: 60px;
         line-height: 70px;
         color: #ffffff;

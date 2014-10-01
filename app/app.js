@@ -13,7 +13,6 @@ angular.module('biarq', [
     'biarq.comon',
     'biarq.util',
     'google-maps',
-    'angularSpinner',
     'biarq.remodelacoes',
     'biarq.construcao'
 
