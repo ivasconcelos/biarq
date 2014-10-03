@@ -13,11 +13,12 @@ angular.module('biarq.comon', [])
             //CLOSE and OPEN || TOGGLE || MENU IN MOBILE
             var menu = document.getElementById('navMenuWrp');
             var aberto = false;
+
             $scope.toggle= function() {
                 if (aberto) {
-                menu.className = 'fechaMenu';
+                    menu.className = 'fechaMenu';
             }else{
-                menu.className = 'abreMenu';
+                    menu.className = 'abreMenu';
             }
             aberto = !aberto
         }

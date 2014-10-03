@@ -1,3 +1,4 @@
+<!-- TODO :HOME ANIMACAO SLIDER DINAMICO -->
 <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html lang="en" ng-app="biarq" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -21,17 +22,17 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" type="text/css">
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  -->
-    <style>
+<!--    <style>
         .ui-show {
             color: blue;
-            transition: all 0.5s ease; /* You should probably browser-prefix this */
+            transition: all 0.5s ease;
         }
 
         .ui-hide {
             opacity: 0;
-            transition: all 0.5s ease; /* You should probably browser-prefix this */
+            transition: all 0.5s ease;
         }
-    </style>
+    </style>-->
 
 </head>
 <body ng-controller="headerCtrl">
@@ -40,7 +41,10 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="header" auto-height> <!--slider-->
+
+
+
+<div class="header" auto-height>
 
     <div class="headerContent">
 
@@ -65,7 +69,7 @@
             <div class="navMenuAlign">
                 <!-- NAV MENU ITEMS -->
                 <div class="navMenuItem" ng-repeat="menu in mainMenu">
-                    <div><a href="{{menu.link}}"title="{{menu.nome}}">{{menu.nome}} </a></div>
+                    <div><a href="{{menu.link}}"title="{{menu.nome}}" ng-click="toggle()">{{menu.nome}} </a></div>
                     <div class="menuLinkAnim1"></div>
                     <div class="menuLinkAnim2"></div>
                 </div>
@@ -98,6 +102,10 @@
 
 <div ng-view class="viewContent question slide-pop">
 </div>
+
+
+
+
 
 <footer>
     <div class="footerContent">

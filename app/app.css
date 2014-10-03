@@ -79,6 +79,7 @@ p {
     padding-top: 5px;
     height: 520px;
     width: 100%;
+
     background: #000000 url('img/image-slider-3.jpg') center center no-repeat
 }
 
@@ -126,6 +127,7 @@ p {
     .header {
         padding-top: 5%;
         background-size: 100%;
+
 
     }
 
@@ -275,7 +277,7 @@ footer a {
 /* NG-VIEW CONTENT SE FOR NUMA RESOLUÇÃO MAIOR*/
 @media (min-width: 768px) {
     .viewContent {
-        padding: 50px 0 50px 0;
+        /*padding: 50px 0 50px 0;*/
     }
 
 }
@@ -388,18 +390,18 @@ footer a {
 .pImgWrp {
     width: 100%;
     position: relative;
-
 }
 
 @media (min-width: 768px) {
     .pWrp {
         width: 31.5%;
         float: left;
-        margin: 0 10px 60px 10px;
+        margin: 0 5px 60px 5px;
 
     }
 
 }
+
 
 
 
@@ -425,7 +427,7 @@ footer a {
 /* PORTOFLIO IMG SE FOR NUMA RESOLUÇÃO GRANDE */
 @media (min-width: 768px) {
     .pImg {
-        max-height: 200px;
+       /* max-height: 200px;*/
 
     }
 
@@ -548,7 +550,7 @@ footer a {
     width: 20px;
     height: 16px;
     /*background-color: #8dbf41;*/
-    background: url('/img/bq.png') center center;
+    background: url('img/bq.png') center center;
     margin-right: 8px;
 }
 
@@ -607,9 +609,7 @@ footer a {
     }
 
     .homeProjectArea {
-        padding: 0;
+        padding: 50px 0;
     }
 
 }
-
-
