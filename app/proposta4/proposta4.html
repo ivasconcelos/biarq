@@ -4,14 +4,10 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div  ng-controller="headerCtrl">
-
-    <div ng-controller="proposta2Ctrl">
+<div class="foda"  ng-controller="headerCtrl">
 
 
-
-
-    <div id="headerF">
+    <div class="header" style="height: 460px">
 
         <div class="headerContent">
 
@@ -51,22 +47,14 @@
             <!-- HOME BIG HEADER SLOGAN (only visible in HOME) -->
             <div class="bigHeaderContent">
                 <div id="homeImgTitleArea">
-                    <h2> Paixão pela arquitectura este é o teste 4</h2>
+                    <h2> Paixão pela arquitectura este é o teste 3 </h2>
                 </div>
-
-                <div style="text-align: center; margin: 60px 0 120px 0">
-
-                <div class="rectanguloHeaderHome">
-                    SABER MAIS
-                </div>
-                </div>
-
-                <div class="bolasHeaderSliderWrp">
+<!--                <div class="bolasHeaderSliderWrp">
                     <div class="bolaHeaderSlider"></div>
                     <div class="bolaHeaderSlider"></div>
-                    <div class="bolaHeaderSlider" style="background-color: #ffffff; border-color:#ffffff"></div>
+                    <div class="bolaHeaderSlider"></div>
                     <div class="clear"></div>
-                </div>
+                </div>-->
             </div>
             <!-- end HOME BIG HEADER SLOGAN -->
 
@@ -75,17 +63,10 @@
     </div>
 
 
-
-
-</div>
-    </div>
-
-
-
     <div  class="viewContent question slide-pop">
 
         <!-- HOME -- PROJECT AREA -->
-        <div class="homeProjectArea" ng-controller="portfolioCtrl" style="margin-top: 100px">
+        <div class="homeProjectArea" ng-controller="portfolioCtrl">
 
 
 
@@ -98,10 +79,10 @@
 
 
             <!-- PROJECT -->
-            <div class="pWrp pWrp2" data-ng-repeat="proj in projectos|limitTo:3">
+            <div class="pWrp" data-ng-repeat="proj in projectos|limitTo:3">
 
                 <!--PPROJECT IMAGE -->
-                <div class="pImgWrp">
+                <div class="pImgWrp pImgWrp4">
                     <a class="pImgLink" href="#/{{proj.url('portfolio')}}" title="{{proj.titulo}}">
                         <!-- BOLAS BRANCAS -->
                         <div class="bolasWrp">
@@ -117,8 +98,6 @@
                 </div>
 
 
-                <div class="testepcontentwrp">
-
 
 
                 <!--PROJECT TITLE -->
@@ -131,15 +110,9 @@
                 </div>
 
                 <!--PROJECT BTN 'VER MAIS' -->
-                <div class="mainBtn">
+                <div class="mainBtn testeBtn">
                     <a href="#/{{proj.url('portfolio')}}" title="Ver Mais">Ver Mais</a>
                 </div>
-
-                </div>
-
-
-
-
 
             </div>
 
@@ -201,6 +174,7 @@
 
 
     </div>
+</div>
 
 
 <div class="footerTeste">
@@ -215,6 +189,5 @@
         <div class="clear"></div>
     </div>
 </div>
-
 
 

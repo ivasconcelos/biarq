@@ -50,7 +50,7 @@ a {
 }
 
 a:hover, .currentLink, .biarqColor {
-    color: #8dbf41;
+    color: #64a800;
 }
 
 .clear {
@@ -90,6 +90,7 @@ p {
     background: #000000 url('img/image-slider-3.jpg') center center no-repeat;
     margin-bottom: 50px;
     padding-top: 5%;
+    max-height:770px;
 }
 
 .bigHeader {
@@ -195,7 +196,7 @@ p {
 /* animações NAV MENU */
 .menuLinkAnim1, .menuLinkAnim2 {
     transition: all 0.6s;
-    border-top: 2px dotted #8dbf41;
+    border-top: 2px dotted #64a800;
     height: 5px;
     opacity: 0;
     width: 1px;
@@ -240,7 +241,7 @@ p {
     .menuLinkAnim1, .menuLinkAnim2 {
         transition: all 0.2s;
         margin: 0 auto;
-        border-top: 2px dotted #8dbf41;
+        border-top: 2px dotted #64a800;
     }
 }
 
@@ -357,9 +358,21 @@ footer a {
 }
 
 .mainBtn a:hover {
-    background-color: #8dbf41;
+    background-color: #64a800;
     transition: background-color 1s;
 }
+
+
+.testeBtn a {
+    background: rgba(100, 168, 0, 0.5);
+    transition: background-color 1s;
+}
+
+.testeBtn a:hover {
+    background-color: #344046;
+    transition: background-color 1s;
+}
+
 
 /* CONTACTS MAP */
 .angular-google-map-container {
@@ -368,7 +381,7 @@ footer a {
 
 /* CONTACTS ADDRESS */
 .title2 {
-    color: #8dbf41;
+    color: #64a800;
     font-size: 20px;
     line-height: 1.5em;
     text-transform: uppercase;
@@ -417,10 +430,23 @@ footer a {
 
 }
 
+.pWrp3{
+    box-shadow: -8px -8px 10px #000;
+
+}
+
+
+
 
 .pImgWrp {
     width: 100%;
     position: relative;
+}
+
+
+.teste3pcontentwrp {
+    padding-left: 5px;
+    box-sizing: border-box;
 }
 
 .testepcontentwrp {
@@ -430,6 +456,11 @@ footer a {
 
 .pImgWrp2 {
     box-shadow: -4px -9px 22px #444;
+}
+
+
+.pImgWrp4 {
+    box-shadow: -8px -8px 10px #000;
 }
 
 @media (min-width: 768px) {
@@ -454,7 +485,7 @@ footer a {
 }
 
 .pImgWrp:hover .pImgLink {
-    background-color: #8dbf41;
+    background-color: #64a800;
     transition: all 0.6s;
     opacity: 0.8;
 }
@@ -589,7 +620,7 @@ footer a {
     display: inline-block;
     width: 20px;
     height: 16px;
-    /*background-color: #8dbf41;*/
+    /*background-color: #64a800;*/
     background: url('img/bq.png') center center;
     margin-right: 8px;
 }
@@ -640,11 +671,11 @@ footer a {
         border-radius: 20px;
         float: left;
         background-color: transparent;
-        border: 1px solid #8dbf41;
+        border: 1px solid #64a800;
     }
 
     .bolaHeaderSlider:hover {
-        background-color: #8dbf41;
+        background-color: #64a800;
         cursor: crosshair;
     }
 
@@ -664,3 +695,19 @@ footer a {
 
 
 
+.rectanguloHeaderHome {
+    background-color: transparent;
+    border: 1px solid #64a800;
+    color: #ffffff;
+    padding: 20px 30px;
+    display: inline-block;
+    margin: 0 auto;
+    font: 17px/20px 'Open Sans', sans-serif;
+    transition: all 0.5s;
+}
+
+.rectanguloHeaderHome:hover{
+    background-color: #64a800;
+    transition: all 0.5s;
+
+}

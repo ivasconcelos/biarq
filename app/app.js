@@ -16,7 +16,9 @@ angular.module('biarq', [
     'biarq.remodelacoes',
     'biarq.construcao',
     'biarq.proposta1',
-    'biarq.proposta2'
+    'biarq.proposta2',
+    'biarq.proposta3',
+    'biarq.proposta4'
 
 
 
