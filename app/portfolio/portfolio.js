@@ -195,11 +195,11 @@ angular.module('biarq.portfolio', ['ngRoute'])
             //responsive code end
         };
     }]).constant('$JssorUtils', window.$JssorUtils)
-    .directive('imagesGallery', function () {
+    /*.directive('imagesGallery', function () {
         return {
             restrict: 'EA', //E = element, A = attribute, C = class, M = comment
             scope: {
-                projects: '@' 
+                projects: '@',
                 },
                 template: '<div  ng-repeat="foto in projects  track by $index"><img u="image" src="http://admin.biarq.com/img/projectos/grandes/{{foto}}" /><img u="thumb" src="http://admin.biarq.com/img/projectos/pequenas/{{foto}}" /></div>',
                        //   templateUrl: 'mytemplate.html',
@@ -210,6 +210,6 @@ angular.module('biarq.portfolio', ['ngRoute'])
                } //DOM manipulation
 
         }
-    });
+    })*/;
 
 
