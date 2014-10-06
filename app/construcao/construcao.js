@@ -31,7 +31,7 @@ angular.module('biarq.construcao', ['ngRoute'])
 
                 }, function (error) {
                     // error handler
-                    console.log(error)
+                    //console.log(error)
                 })
 
         }
@@ -79,12 +79,12 @@ angular.module('biarq.construcao', ['ngRoute'])
         Construcao.get({ id: $routeParams.id },
             function (data) {
                 // success handler
-                console.log(data)
+                //console.log(data)
                 $scope.construcao = data
                 $timeout(function () {  jssor_slider1_starter('slider1_container'); },500);
             }, function (error) {
                 // error handler
-                console.log(error)
+                //console.log(error)
             });
 
 

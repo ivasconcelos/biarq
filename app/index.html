@@ -1,13 +1,13 @@
 <!-- TODO :HOME ANIMACAO SLIDER DINAMICO -->
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html lang="en" ng-app="biarq" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html lang="en" id="ng-app" ng-app="biarq" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
-<html lang="en" ng-app="biarq" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<html lang="en" id="ng-app" ng-app="biarq" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
-<html lang="en" ng-app="biarq" class="no-js lt-ie9"> <![endif]-->
+<html lang="en" id="ng-app" ng-app="biarq" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="biarq" class="no-js" ng-cloak> <!--<![endif]-->
+<html lang="en" id="ng-app" ng-app="biarq" class="no-js" ng-cloak> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,107 +19,28 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
     <link rel="stylesheet" href="app.css"/>
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/douglascrockford/JSON-js/master/json2.js"></script>-->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" type="text/css">
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  -->
-<!--    <style>
-        .ui-show {
-            color: blue;
-            transition: all 0.5s ease;
-        }
+    <!--    <style>
+            .ui-show {
+                color: blue;
+                transition: all 0.5s ease;
+            }
 
-        .ui-hide {
-            opacity: 0;
-            transition: all 0.5s ease;
-        }
-    </style>-->
+            .ui-hide {
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+        </style>-->
 
 </head>
-<body ng-controller="headerCtrl">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+<body>
+<div ng-view >
 
-
-
-
-<div class="header" auto-height>
-
-    <div class="headerContent">
-
-        <!-- NAV MENU BTN -->
-        <div class="menuBtn" ng-click="toggle()" title="Menu">
-            <div class="slashMenuBtn"></div>
-            <div class="slashMenuBtn"></div>
-            <div class="slashMenuBtn"></div>
-        </div>
-
-        <!-- LOGO -->
-        <div class="headerLogoWrp">
-            <a href="#/home" title="Biarq Home" class="headerLogoImg">
-                <h1 class="logoBiarq">
-                    Biarq Arquitectura e Remodelações
-                </h1>
-            </a>
-        </div>
-
-        <!-- NAV MENU -->
-        <div id="navMenuWrp">
-            <div class="navMenuAlign">
-                <!-- NAV MENU ITEMS -->
-                <div class="navMenuItem" ng-repeat="menu in mainMenu">
-                    <div><a href="{{menu.link}}"title="{{menu.nome}}" ng-click="toggle()">{{menu.nome}} </a></div>
-                    <div class="menuLinkAnim1"></div>
-                    <div class="menuLinkAnim2"></div>
-                </div>
-                <div class="clear"></div>
-
-            </div>
-            <div class="clear"></div>
-        </div>
-        <!-- end NAV MENU -->
-
-
-        <!-- HOME BIG HEADER SLOGAN (only visible in HOME) -->
-        <div class="bigHeaderContent">
-            <div id="homeImgTitleArea">
-                <h2> Paixão pela arquitectura mãeteto assado</h2>
-            </div>
-            <div class="bolasHeaderSliderWrp">
-                <div class="bolaHeaderSlider"></div>
-                <div class="bolaHeaderSlider"></div>
-                <div class="bolaHeaderSlider"></div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <!-- end HOME BIG HEADER SLOGAN -->
-
-    </div>
 
 </div>
-
-
-<div ng-view class="viewContent question slide-pop">
-</div>
-
-
-
-
-
-<footer>
-    <div class="footerContent">
-        <div class="footerCopy">
-            <span class="biarqColor"> BIARQ </span> &copy; 2014. All rights reserved.
-            Powered by <a href="#" title="SyncIM"> SyncIM </a> | Tel: +351.960021911
-        </div>
-        <div class="footerLogo">
-            <img src="img/footerLogo.png">
-        </div>
-        <div class="clear"></div>
-    </div>
-</footer>
-
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -141,9 +62,13 @@
 <script src="about/about.js"></script>
 <script src="portfolio/portfolio.js"></script>
 <script src="construcao/construcao.js"></script>
+<script src="proposta1/proposta1.js"></script>
+<script src="proposta2/proposta2.js"></script>
 <script src="remodelacoes/remodelacoes.js"></script>
 <script src="comon.js"></script>
 <script src="components/biarq/projecto.js"></script>
 
+
 </body>
+
 </html>

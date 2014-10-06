@@ -28,10 +28,10 @@ angular.module('biarq.remodelacoes', ['ngRoute'])
                     }
                     $scope.skip+=data.length
 
-                    console.log(data)
+                    //console.log(data)
                 }, function (error) {
                     // error handler
-                    console.log(error)
+                    //console.log(error)
                 }
             )
 
@@ -74,12 +74,12 @@ angular.module('biarq.remodelacoes', ['ngRoute'])
         Remodelacoes.get({ id: $routeParams.id },
             function (data) {
                 // success handler
-                console.log(data)
+                //console.log(data)
                 $scope.remodelacoes = data
                 $timeout(function () {  jssor_slider1_starter('slider1_container'); },500);
             }, function (error) {
                 // error handler
-                console.log(error)
+                //console.log(error)
             });
 
 

@@ -30,15 +30,23 @@ angular.module('biarq.comon', [])
                 this.nome = nome;
             }
 
-            $scope.menu1 = new MainMenu("#/home", "home");
+/*            $scope.menu1 = new MainMenu("#/home", "home");
             $scope.menu2 = new MainMenu("#/portfolio", "portefólio");
             $scope.menu3 = new MainMenu("#/construcao", "em construção");
             $scope.menu4 = new MainMenu("#/remodelacoes", "remodelações");
             $scope.menu5 = new MainMenu("#/", "stands");
             $scope.menu6 = new MainMenu("#/about", "biarq");
-            $scope.menu7 = new MainMenu("#/contactos", "contactos");
+            $scope.menu7 = new MainMenu("#/contactos", "contactos");*/
 
-            $scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu3, $scope.menu4, $scope.menu5, $scope.menu6, $scope.menu7];
+
+            $scope.menu1 = new MainMenu("#/home", "Original");
+            $scope.menu2 = new MainMenu("#/proposta1", "teste1");
+            $scope.menu3 = new MainMenu("#/proposta2", "teste2");
+
+
+            $scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu3];
+
+            /*$scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu3, $scope.menu4, $scope.menu5, $scope.menu6, $scope.menu7];*/
 
 
 
@@ -107,8 +115,10 @@ angular.module('biarq.comon', [])
                 restrict: 'AE',
                 link: function(scope, elem, attrs) {
                     scope.$on('$routeChangeSuccess', function() {
-                        elem.removeClass('bigHeader smallHeader');
-                        elem.addClass('bigHeader');
+                       // elem.removeClass('bigHeader smallHeader');
+                     //   elem.addClass('bigHeader');
+
+
 
 
                         if (($location.path() != "/home") && (screen.width > 768)) {
@@ -116,6 +126,8 @@ angular.module('biarq.comon', [])
                             elem.removeClass('bigHeader smallHeader');
                             elem.addClass('smallHeader');
                         }
+
+
                     });
                 }
 

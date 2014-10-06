@@ -14,7 +14,9 @@ angular.module('biarq', [
     'biarq.util',
     'google-maps',
     'biarq.remodelacoes',
-    'biarq.construcao'
+    'biarq.construcao',
+    'biarq.proposta1',
+    'biarq.proposta2'
 
 
 

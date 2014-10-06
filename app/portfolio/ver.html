@@ -1,3 +1,61 @@
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="foda"  ng-controller="headerCtrl">
+
+
+    <div class="header" style="height: 200px">
+
+        <div class="headerContent">
+
+            <!-- NAV MENU BTN -->
+            <div class="menuBtn" ng-click="toggle()" title="Menu">
+                <div class="slashMenuBtn"></div>
+                <div class="slashMenuBtn"></div>
+                <div class="slashMenuBtn"></div>
+            </div>
+
+            <!-- LOGO -->
+            <div class="headerLogoWrp">
+                <a href="#/home" title="Biarq Home" class="headerLogoImg">
+                    <h1 class="logoBiarq">
+                        Biarq Arquitectura e Remodelações
+                    </h1>
+                </a>
+            </div>
+
+            <!-- NAV MENU -->
+            <div id="navMenuWrp">
+                <div class="navMenuAlign">
+                    <!-- NAV MENU ITEMS -->
+                    <div class="navMenuItem" ng-repeat="menu in mainMenu">
+                        <div><a href="{{menu.link}}"title="{{menu.nome}}" ng-click="toggle()">{{menu.nome}} </a></div>
+                        <div class="menuLinkAnim1"></div>
+                        <div class="menuLinkAnim2"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- end NAV MENU -->
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <div  class="viewContent question slide-pop">
+
+
+
+
 <!-- VIEW SPECIFIC PROJECT PAGE WRAP -->
 <div class="pageAreaWrp" ng-cloak>
 
@@ -46,7 +104,7 @@
     <!-- Jssor Slider End -->
 
 
-    <h2 style="text-align: center; padding: 40px 0 0 0"> {{projecto.titulo}}</h2>
+    <p class="title2" style="text-align: center; padding: 40px 0 0 0"> {{projecto.titulo}}</p>
 
     <div class="verProjTxtWrp">
         <p ng-bind-html="projecto.texto"></p>
@@ -55,7 +113,22 @@
 </div>
 
 
+    </div>
+    </div>
 
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerCopy">
+                <span class="biarqColor"> BIARQ </span> &copy; 2014. All rights reserved.
+                Powered by <a href="#" title="SyncIM"> SyncIM </a> | Tel: +351.960021911
+            </div>
+            <div class="footerLogo">
+                <img src="img/footerLogo.png">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
 
 
 
