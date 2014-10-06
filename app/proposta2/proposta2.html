@@ -90,7 +90,7 @@
 
 
             <!-- PROJECT -->
-            <div class="pWrp" data-ng-repeat="proj in projectos|limitTo:3">
+            <div class="pWrp pWrp2" data-ng-repeat="proj in projectos|limitTo:3">
 
                 <!--PPROJECT IMAGE -->
                 <div class="pImgWrp">
@@ -108,6 +108,11 @@
                     <img data-ng-src="http://admin.biarq.com/img/projectos/grandes/{{proj.fotoprincipal}}" alt="{{proj.titulo}}" class="pImg">
                 </div>
 
+
+                <div class="testepcontentwrp">
+
+
+
                 <!--PROJECT TITLE -->
                 <p class="title2"> {{proj.titulo}} </p>
 
@@ -121,6 +126,13 @@
                 <div class="mainBtn">
                     <a href="#/{{proj.url('portfolio')}}" title="Ver Mais">Ver Mais</a>
                 </div>
+
+                </div>
+
+
+
+
+
             </div>
 
             <div class="clear"></div>

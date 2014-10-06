@@ -412,9 +412,24 @@ footer a {
     margin-bottom: 60px;
 }
 
+.pWrp2{
+    box-shadow: -4px -9px 22px #444;
+
+}
+
+
 .pImgWrp {
     width: 100%;
     position: relative;
+}
+
+.testepcontentwrp {
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.pImgWrp2 {
+    box-shadow: -4px -9px 22px #444;
 }
 
 @media (min-width: 768px) {
