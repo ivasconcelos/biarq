@@ -195,7 +195,7 @@ angular.module('biarq.portfolio', ['ngRoute'])
             //responsive code end
         };
     }]).constant('$JssorUtils', window.$JssorUtils)
-    /*.directive('imagesGallery', function () {
+    .directive('imagesGallery', function () {
         return {
             restrict: 'EA', //E = element, A = attribute, C = class, M = comment
             scope: {
@@ -210,6 +210,6 @@ angular.module('biarq.portfolio', ['ngRoute'])
                } //DOM manipulation
 
         }
-    })*/;
+    });
 
 
