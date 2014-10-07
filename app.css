@@ -761,8 +761,8 @@ footer a {
     cursor: pointer;
     -webkit-animation:popAnim 60s infinite;
     animation: popAnim 60s infinite;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
     transition: all 0.5s;
 }
 .contactPopAnim:hover {
