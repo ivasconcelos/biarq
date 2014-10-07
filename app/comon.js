@@ -40,13 +40,13 @@ angular.module('biarq.comon', [])
 
 
             $scope.menu1 = new MainMenu("#/home", "Original");
-            $scope.menu2 = new MainMenu("#/proposta1", "teste1");
-            $scope.menu3 = new MainMenu("#/proposta2", "teste4");
-            $scope.menu4 = new MainMenu("#/proposta3", "teste2");
-            $scope.menu5 = new MainMenu("#/proposta4", "teste3");
+            $scope.menu2 = new MainMenu("#/proposta1", "teste4");
+            $scope.menu3 = new MainMenu("#/proposta2", "teste3");
+            $scope.menu4 = new MainMenu("#/proposta3", "teste1");
+            $scope.menu5 = new MainMenu("#/proposta4", "teste2");
 
 
-            $scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu4, $scope.menu5, $scope.menu3];
+            $scope.mainMenu = [$scope.menu1, $scope.menu4, $scope.menu5, $scope.menu3];
 
             /*$scope.mainMenu = [$scope.menu1, $scope.menu2, $scope.menu3, $scope.menu4, $scope.menu5, $scope.menu6, $scope.menu7];*/
 
